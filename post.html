@@ -1,381 +1,1165 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover what artificial intelligence means, how it works, its applications, opportunities and challenges in our everyday lives.">
+
     <title>Understanding Artificial Intelligence | ArticleHub</title>
 
+    <!-- MAIN WEBSITE STYLES -->
     <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/post.css">
+
+    <!-- ARTICLE PAGE STYLES -->
+    <link rel="stylesheet" href="css/post.css">
+
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container header-container">
+<!-- =====================================
+     HEADER
+===================================== -->
 
-            <a href="index.html" class="logo">
-                <svg width="42" height="42" viewBox="0 0 42 42" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <rect width="42" height="42" rx="12" fill="#2563EB"/>
-                    <path d="M11 29V13L21 24L31 13V29"
-                          stroke="white" stroke-width="3"
-                          stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+<header class="site-header">
 
-                <span>Article<span class="logo-highlight">Hub</span></span>
-            </a>
+    <div class="container header-container">
 
-            <button class="menu-toggle" id="menu-toggle"
-                    aria-label="Toggle navigation">
-                ☰
+        <a href="index.html" class="logo">
+
+            <svg width="42" height="42" viewBox="0 0 42 42"
+                 fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <rect width="42" height="42" rx="12" fill="#2563EB"/>
+
+                <path d="M11 29V13L21 24L31 13V29"
+                      stroke="white"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+
+            </svg>
+
+            <span>Article<span class="logo-highlight">Hub</span></span>
+
+        </a>
+
+
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Toggle navigation">
+
+            ☰
+
+        </button>
+
+
+        <nav class="navigation" id="navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#explore">Explore</a>
+
+            <a href="index.html#publications">Publications</a>
+
+            <a href="index.html#about">About</a>
+
+            <a href="index.html#contact">Contact</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Switch theme">
+
+                <span id="theme-icon">☾</span>
+
             </button>
 
-            <nav class="navigation" id="navigation">
-                <a href="index.html">Home</a>
-                <a href="index.html#explore">Explore</a>
-                <a href="index.html#publications">Publications</a>
-                <a href="index.html#about">About</a>
-                <a href="index.html#contact">Contact</a>
-            </nav>
+            <a href="login.html" class="btn btn-outline">Login</a>
 
-            <div class="header-actions">
-                <button class="theme-toggle" id="theme-toggle"
-                        aria-label="Switch theme">
-                    <span id="theme-icon">☾</span>
-                </button>
-
-                <a href="login.html" class="btn btn-outline">Login</a>
-                <a href="register.html" class="btn btn-primary">Get Started</a>
-            </div>
+            <a href="register.html" class="btn btn-primary">Get Started</a>
 
         </div>
-    </header>
 
-
-    <!-- ARTICLE PAGE -->
-    <main class="article-page">
-
-        <div class="container">
-
-            <!-- BREADCRUMB -->
-            <div class="article-breadcrumb">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <a href="index.html#explore">Technology</a>
-                <span>/</span>
-                <span>Artificial Intelligence</span>
-            </div>
-
-
-            <!-- ARTICLE HEADER -->
-            <section class="article-heading">
-
-                <span class="article-category">TECHNOLOGY</span>
-
-                <h1>
-                    Understanding Artificial Intelligence:
-                    A Beginner's Guide
-                </h1>
-
-                <p class="article-subtitle">
-                    Discover what artificial intelligence means, how it
-                    works, and why it is becoming an important part of
-                    our everyday lives.
-                </p>
-
-                <!-- AUTHOR INFORMATION -->
-                <div class="article-author">
-
-                    <div class="author-avatar">AH</div>
-
-                    <div class="author-details">
-                        <strong>ArticleHub Editorial Team</strong>
-                        <span>Technology Desk</span>
-                    </div>
-
-                    <div class="article-meta">
-                        <span>November 11, 2026</span>
-                        <span>•</span>
-                        <span>6 min read</span>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-<!-- ARTICLE COVER -->
-<section class="article-cover article-cover-image">
-
-    <img
-        src="assets/images/ai-article-cover.jpg"
-        alt="A technology professional working with artificial intelligence"
-        class="article-cover-photo"
-    >
-
-    <div class="article-cover-overlay"></div>
-
-    <div class="article-cover-caption">
-        <span>THE WORLD OF TECHNOLOGY</span>
-        <h2>Artificial Intelligence Explained</h2>
-        <p>Ideas shaping tomorrow.</p>
     </div>
 
-</section>
+</header>
+
+
+<!-- =====================================
+     ARTICLE PAGE
+===================================== -->
+
+<main class="article-page">
+
+<div class="container">
+
+
+    <!-- BREADCRUMB -->
+
+    <div class="article-breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>/</span>
+
+        <a href="index.html#explore">Technology</a>
+
+        <span>/</span>
+
+        <span>Artificial Intelligence</span>
+
+    </div>
 
 
 
-            <!-- ARTICLE BODY -->
-            <div class="article-layout">
+    <!-- =================================
+         ARTICLE HEADING
+    ================================== -->
 
-                <article class="article-content">
+    <section class="article-heading">
 
-                    <p class="article-introduction">
-                        Artificial Intelligence, commonly known as AI,
-                        is one of the most influential technological
-                        developments of our time. From virtual assistants
-                        to recommendation systems, AI is changing how
-                        people interact with technology.
-                    </p>
-
-                    <h2>What is Artificial Intelligence?</h2>
-
-                    <p>
-                        Artificial Intelligence refers to the ability
-                        of computer systems to perform tasks that
-                        typically require human intelligence.
-                    </p>
-
-                    <p>
-                        These tasks may include understanding language,
-                        recognizing patterns, solving problems, learning
-                        from information, and making predictions.
-                    </p>
-
-                    <blockquote>
-                        Artificial Intelligence is not simply about
-                        creating machines that work. It is about
-                        developing systems that can learn, reason,
-                        and assist people in solving problems.
-                    </blockquote>
-
-                    <h2>How Does AI Work?</h2>
-
-                    <p>
-                        AI systems use different technologies and
-                        techniques to process information. One important
-                        approach is machine learning, which allows
-                        computers to identify patterns in data and
-                        improve their performance through experience.
-                    </p>
-
-                    <p>
-                        For example, a music recommendation system can
-                        study the songs a listener enjoys and suggest
-                        other music that may interest them.
-                    </p>
-
-                    <h2>Examples of AI in Everyday Life</h2>
-
-                    <p>
-                        Artificial Intelligence is already present in
-                        many areas of everyday life. Some examples include:
-                    </p>
-
-                    <ul>
-                        <li><strong>Education:</strong> Learning platforms
-                            can provide personalized learning experiences.</li>
-
-                        <li><strong>Healthcare:</strong> AI tools can help
-                            professionals analyze medical information.</li>
-
-                        <li><strong>Communication:</strong> Language tools
-                            can assist with translation and writing.</li>
-
-                        <li><strong>Transportation:</strong> Intelligent
-                            systems can help improve navigation and traffic
-                            management.</li>
-
-                        <li><strong>Business:</strong> Organizations can use
-                            AI to analyze information and improve workflows.</li>
-                    </ul>
-
-                    <h2>Opportunities and Challenges</h2>
-
-                    <p>
-                        AI presents opportunities for innovation,
-                        productivity, education, and scientific research.
-                        However, its development also raises important
-                        questions about privacy, fairness, reliability,
-                        and the future of work.
-                    </p>
-
-                    <p>
-                        Understanding these opportunities and challenges
-                        is important as individuals, organizations, and
-                        governments continue to adopt AI technologies.
-                    </p>
-
-                    <h2>Conclusion</h2>
-
-                    <p>
-                        Artificial Intelligence is an evolving field
-                        with the potential to influence almost every
-                        industry. Learning its basic concepts is a
-                        valuable first step toward understanding the
-                        technology shaping our future.
-                    </p>
+        <span class="article-category">
+            TECHNOLOGY
+        </span>
 
 
-                    <!-- ARTICLE TAGS -->
-                    <div class="article-tags">
-                        <strong>Tags:</strong>
-                        <a href="#">Artificial Intelligence</a>
-                        <a href="#">Technology</a>
-                        <a href="#">Innovation</a>
-                    </div>
+        <h1>
+            Understanding Artificial Intelligence:
+            A Beginner's Guide
+        </h1>
 
 
-                    <!-- SHARE -->
-                    <div class="article-share">
-                        <h3>Found this article useful?</h3>
-                        <p>Share it with others who may find it valuable.</p>
+        <p class="article-subtitle">
 
-                        <button id="share-article" class="btn btn-primary">
-                            Share Article
-                        </button>
-                    </div>
+            Discover what artificial intelligence means,
+            how it works, and why it is becoming an important
+            part of our everyday lives.
+
+        </p>
 
 
-                    <!-- AUTHOR BIO -->
-                    <section class="article-author-bio">
+        <!-- AUTHOR DETAILS -->
 
-                        <div class="author-avatar author-avatar-large">
-                            AH
-                        </div>
+        <div class="article-author">
 
-                        <div>
-                            <span>ABOUT THE AUTHOR</span>
-                            <h3>ArticleHub Editorial Team</h3>
-
-                            <p>
-                                The ArticleHub Editorial Team creates
-                                informative and engaging content across
-                                technology, education, business, lifestyle,
-                                and other important areas.
-                            </p>
-                        </div>
-
-                    </section>
-
-                </article>
+            <div class="author-avatar">
+                AH
+            </div>
 
 
-                <!-- SIDEBAR -->
-                <aside class="article-sidebar">
+            <div class="author-details">
 
-                    <div class="sidebar-card">
-                        <h3>About ArticleHub</h3>
+                <strong>ArticleHub Editorial Team</strong>
 
-                        <p>
-                            A platform for ideas, stories, and knowledge.
-                            Explore informative articles from different
-                            fields and perspectives.
-                        </p>
-
-                        <a href="index.html#about">
-                            Learn more →
-                        </a>
-                    </div>
-
-                    <div class="sidebar-card">
-                        <h3>Explore Topics</h3>
-
-                        <ul>
-                            <li><a href="index.html#explore">Technology</a></li>
-                            <li><a href="index.html#explore">Education</a></li>
-                            <li><a href="index.html#explore">Business</a></li>
-                            <li><a href="index.html#explore">Lifestyle</a></li>
-                            <li><a href="index.html#explore">Global Affairs</a></li>
-                        </ul>
-                    </div>
-
-                </aside>
+                <span>Technology Desk</span>
 
             </div>
 
 
-            <!-- RELATED ARTICLES -->
-            <section class="related-articles">
+            <div class="article-meta">
 
-                <div class="section-heading">
-                    <span>KEEP READING</span>
-                    <h2>Related Articles</h2>
-                    <p>Discover more stories from ArticleHub.</p>
+                <span>November 11, 2026</span>
+
+                <span>•</span>
+
+                <span>8 min read</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         MAIN ARTICLE COVER
+    ================================== -->
+
+    <section class="article-cover article-cover-image">
+
+        <img
+            src="assets/images/ai-article-cover.jpg"
+            alt="Technology professional exploring artificial intelligence"
+            class="article-cover-photo"
+        >
+
+        <div class="article-cover-overlay"></div>
+
+        <div class="article-cover-caption">
+
+            <span>THE WORLD OF TECHNOLOGY</span>
+
+            <h2>Artificial Intelligence Explained</h2>
+
+            <p>Ideas shaping tomorrow.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         ARTICLE CONTENT LAYOUT
+    ================================== -->
+
+    <div class="article-layout">
+
+
+        <!-- MAIN ARTICLE -->
+
+        <article class="article-content">
+
+
+            <!-- INTRODUCTION -->
+
+            <p class="article-introduction">
+
+                Artificial Intelligence, commonly known as AI,
+                is one of the most influential technological
+                developments of our time.
+
+                From virtual assistants and recommendation
+                systems to advanced scientific research,
+                artificial intelligence is changing how
+                people interact with technology.
+
+            </p>
+
+
+
+            <!-- TABLE OF CONTENTS -->
+
+            <div class="article-table-of-contents">
+
+                <h3>In This Article</h3>
+
+                <ol>
+
+                    <li><a href="#what-is-ai">What is Artificial Intelligence?</a></li>
+
+                    <li><a href="#how-ai-works">How Does AI Work?</a></li>
+
+                    <li><a href="#types-of-ai">Understanding Different Types of AI</a></li>
+
+                    <li><a href="#everyday-ai">AI in Everyday Life</a></li>
+
+                    <li><a href="#benefits">Opportunities and Benefits</a></li>
+
+                    <li><a href="#challenges">Challenges and Concerns</a></li>
+
+                    <li><a href="#future-ai">The Future of AI</a></li>
+
+                </ol>
+
+            </div>
+
+
+
+            <!-- SECTION 1 -->
+
+            <section id="what-is-ai">
+
+                <h2>1. What is Artificial Intelligence?</h2>
+
+                <p>
+
+                    Artificial Intelligence refers to the ability
+                    of computer systems to perform tasks that
+                    typically require aspects of human intelligence.
+
+                    These tasks may include understanding language,
+                    recognizing patterns, solving problems,
+                    learning from information and making predictions.
+
+                </p>
+
+
+                <figure class="article-figure">
+
+                    <img
+                        src="assets/images/ai-technology.jpg"
+                        alt="Artificial intelligence technology and digital computing"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+
+                        Artificial intelligence combines computing,
+                        data and algorithms to perform intelligent tasks.
+
+                    </figcaption>
+
+                </figure>
+
+
+                <p>
+
+                    Unlike traditional computer programs that
+                    follow only predefined instructions, some
+                    AI systems can identify patterns in data
+                    and use what they learn to improve their
+                    performance.
+
+                </p>
+
+
+                <blockquote>
+
+                    Artificial Intelligence is about developing
+                    computer systems capable of performing tasks
+                    that normally require human intelligence.
+
+                </blockquote>
+
+            </section>
+
+
+
+            <!-- SECTION 2 -->
+
+            <section id="how-ai-works">
+
+                <h2>2. How Does AI Work?</h2>
+
+                <p>
+
+                    Artificial Intelligence works through a
+                    combination of data, algorithms, computing
+                    power and mathematical models.
+
+                    AI systems process information and use
+                    computational methods to identify patterns,
+                    generate predictions or produce responses.
+
+                </p>
+
+
+                <figure class="article-figure">
+
+                    <img
+                        src="assets/images/machine-learning.jpg"
+                        alt="Data analysis and machine learning visualization"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+
+                        Machine learning enables computer systems
+                        to identify patterns in information.
+
+                    </figcaption>
+
+                </figure>
+
+
+                <h3>Understanding Machine Learning</h3>
+
+                <p>
+
+                    Machine Learning is a major area of AI.
+
+                    It allows computer systems to learn patterns
+                    from data instead of relying entirely on
+                    explicitly programmed instructions.
+
+                </p>
+
+
+                <p>
+
+                    For example, a music recommendation platform
+                    can analyze listening patterns and suggest
+                    songs that a user may enjoy.
+
+                </p>
+
+
+                <h3>What is Deep Learning?</h3>
+
+                <p>
+
+                    Deep Learning is a specialized area of
+                    machine learning that uses multi-layered
+                    artificial neural networks.
+
+                    It supports applications such as image
+                    recognition, speech processing and
+                    advanced language technologies.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 3 -->
+
+            <section id="types-of-ai">
+
+                <h2>3. Understanding Different Types of AI</h2>
+
+                <p>
+
+                    Artificial Intelligence can be classified
+                    in different ways depending on its
+                    capabilities and intended applications.
+
+                </p>
+
+
+                <h3>Narrow AI</h3>
+
+                <p>
+
+                    Narrow AI refers to systems designed
+                    to perform specific tasks.
+
+                    Examples include recommendation engines,
+                    voice assistants, translation tools
+                    and image recognition systems.
+
+                </p>
+
+
+                <h3>General AI</h3>
+
+                <p>
+
+                    Artificial General Intelligence, often
+                    called AGI, describes a hypothetical
+                    form of AI capable of performing a broad
+                    range of intellectual tasks at a level
+                    comparable to human intelligence.
+
+                    It has not yet been achieved.
+
+                </p>
+
+
+                <h3>Superintelligence</h3>
+
+                <p>
+
+                    Artificial Superintelligence is a
+                    theoretical concept involving AI systems
+                    that would surpass human capabilities
+                    across many intellectual areas.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 4 -->
+
+            <section id="everyday-ai">
+
+                <h2>4. AI in Everyday Life</h2>
+
+                <p>
+
+                    Artificial Intelligence is no longer
+                    limited to research laboratories.
+
+                    It is already being used in several
+                    industries and everyday activities.
+
+                </p>
+
+
+                <figure class="article-figure">
+
+                    <img
+                        src="assets/images/ai-education.jpg"
+                        alt="Student using digital technology for education"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+
+                        AI-powered educational tools can support
+                        personalized learning experiences.
+
+                    </figcaption>
+
+                </figure>
+
+
+                <h3>Education</h3>
+
+                <p>
+
+                    AI-powered educational platforms can
+                    help students understand difficult
+                    concepts, receive personalized feedback
+                    and access learning resources.
+
+                </p>
+
+
+                <figure class="article-figure">
+
+                    <img
+                        src="assets/images/ai-healthcare.jpg"
+                        alt="Healthcare professionals using digital technology"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+
+                        AI applications can assist healthcare
+                        professionals in analyzing information.
+
+                    </figcaption>
+
+                </figure>
+
+
+                <h3>Healthcare</h3>
+
+                <p>
+
+                    AI tools can assist medical professionals
+                    with image analysis, research and the
+                    interpretation of complex information.
+
+                    They support professional decision-making
+                    rather than replacing the need for
+                    qualified healthcare experts.
+
+                </p>
+
+
+                <h3>Communication</h3>
+
+                <p>
+
+                    Language translation, speech recognition,
+                    writing assistance and virtual assistants
+                    are examples of AI applications in
+                    communication.
+
+                </p>
+
+
+                <h3>Transportation</h3>
+
+                <p>
+
+                    AI technologies can support navigation,
+                    traffic prediction, route planning
+                    and transportation management.
+
+                </p>
+
+
+                <h3>Business</h3>
+
+                <p>
+
+                    Businesses use AI to analyze information,
+                    automate selected processes and improve
+                    customer experiences.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 5 -->
+
+            <section id="benefits">
+
+                <h2>5. Opportunities and Benefits of AI</h2>
+
+                <p>
+
+                    Artificial Intelligence creates
+                    opportunities across many industries.
+
+                    Some of its potential benefits include:
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        <strong>Improved productivity:</strong>
+                        AI can help automate repetitive tasks.
+                    </li>
+
+                    <li>
+                        <strong>Better data analysis:</strong>
+                        AI can identify patterns in large
+                        amounts of information.
+                    </li>
+
+                    <li>
+                        <strong>Educational support:</strong>
+                        AI can help learners access
+                        personalized learning resources.
+                    </li>
+
+                    <li>
+                        <strong>Scientific research:</strong>
+                        AI can assist researchers in
+                        analyzing complex datasets.
+                    </li>
+
+                    <li>
+                        <strong>Innovation:</strong>
+                        AI can support the development
+                        of new products and services.
+                    </li>
+
+                </ul>
+
+
+                <figure class="article-figure">
+
+                    <img
+                        src="assets/images/ai-robotics.jpg"
+                        alt="Modern robotics and artificial intelligence technology"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+
+                        AI and robotics are creating new
+                        possibilities in technology and industry.
+
+                    </figcaption>
+
+                </figure>
+
+            </section>
+
+
+
+            <!-- SECTION 6 -->
+
+            <section id="challenges">
+
+                <h2>6. Challenges and Concerns</h2>
+
+                <p>
+
+                    Although AI offers significant opportunities,
+                    its development also raises important
+                    questions.
+
+                </p>
+
+
+                <h3>Privacy and Data Protection</h3>
+
+                <p>
+
+                    AI systems may process large quantities
+                    of personal information.
+
+                    Responsible data management is essential
+                    to protect individuals and organizations.
+
+                </p>
+
+
+                <h3>Bias and Fairness</h3>
+
+                <p>
+
+                    AI systems can produce unfair results
+                    when their training data or design
+                    contains biases.
+
+                    Developers must work toward more
+                    transparent and responsible systems.
+
+                </p>
+
+
+                <h3>Reliability</h3>
+
+                <p>
+
+                    AI-generated information is not always
+                    accurate.
+
+                    Users should verify important information
+                    instead of assuming every AI response
+                    is correct.
+
+                </p>
+
+
+                <h3>The Future of Work</h3>
+
+                <p>
+
+                    AI is changing the way some jobs and
+                    industries operate.
+
+                    This makes continuous learning,
+                    adaptability and the development of
+                    new skills increasingly important.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- SECTION 7 -->
+
+            <section id="future-ai">
+
+                <h2>7. The Future of Artificial Intelligence</h2>
+
+                <p>
+
+                    Artificial Intelligence continues to
+                    develop, with new applications emerging
+                    in computing, education, medicine,
+                    engineering and scientific research.
+
+                </p>
+
+
+                <figure class="article-figure">
+
+                    <img
+                        src="assets/images/future-technology.jpg"
+                        alt="Futuristic technology research environment"
+                        loading="lazy"
+                    >
+
+                    <figcaption>
+
+                        Research and innovation continue to
+                        shape the future of artificial intelligence.
+
+                    </figcaption>
+
+                </figure>
+
+
+                <p>
+
+                    The future of AI will depend not only
+                    on technological progress but also
+                    on responsible development, public
+                    understanding and effective governance.
+
+                </p>
+
+
+                <p>
+
+                    As AI becomes more integrated into
+                    society, understanding its capabilities
+                    and limitations will become increasingly
+                    valuable.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- CONCLUSION -->
+
+            <section id="conclusion">
+
+                <h2>Conclusion</h2>
+
+                <p>
+
+                    Artificial Intelligence is an evolving
+                    field with the potential to influence
+                    almost every industry.
+
+                    From education and healthcare to
+                    transportation and business, AI is
+                    creating new possibilities while
+                    introducing important challenges.
+
+                </p>
+
+
+                <p>
+
+                    Learning its basic concepts is a
+                    valuable first step toward understanding
+                    the technology shaping our future.
+
+                </p>
+
+            </section>
+
+
+
+           
+            <!-- ARTICLE TAGS -->
+            <div class="article-tags">
+
+                <strong>Tags:</strong>
+
+                <a href="#">Artificial Intelligence</a>
+                <a href="#">Technology</a>
+                <a href="#">Machine Learning</a>
+                <a href="#">Innovation</a>
+
+            </div>
+
+
+            <!-- SHARE ARTICLE -->
+            <div class="article-share">
+
+                <h3>Found this article useful?</h3>
+
+                <p>
+                    Share it with others who may find it valuable.
+                </p>
+
+                <button id="share-article" class="btn btn-primary">
+                    Share Article
+                </button>
+
+            </div>
+
+
+            <!-- AUTHOR BIO -->
+            <section class="article-author-bio">
+
+                <div class="author-avatar author-avatar-large">
+                    AH
                 </div>
 
-                <div class="related-grid">
+                <div>
 
-                    <a href="post.html" class="related-card">
-                        <span>TECHNOLOGY</span>
-                        <h3>The Future of Technology and Innovation</h3>
-                        <p>Explore how emerging technologies are
-                           influencing our world.</p>
-                        <span class="related-link">Read Article →</span>
-                    </a>
+                    <span>ABOUT THE AUTHOR</span>
 
-                    <a href="post.html" class="related-card">
-                        <span>EDUCATION</span>
-                        <h3>How Digital Learning Is Changing Education</h3>
-                        <p>Discover how technology is creating new
-                           learning opportunities.</p>
-                        <span class="related-link">Read Article →</span>
-                    </a>
+                    <h3>ArticleHub Editorial Team</h3>
 
-                    <a href="post.html" class="related-card">
-                        <span>BUSINESS</span>
-                        <h3>Innovation and the Modern Business World</h3>
-                        <p>Understand the role of innovation in
-                           modern organizations.</p>
-                        <span class="related-link">Read Article →</span>
-                    </a>
+                    <p>
+                        The ArticleHub Editorial Team creates
+                        informative and engaging content across
+                        technology, education, business, lifestyle
+                        and other important areas.
+                    </p>
 
                 </div>
 
             </section>
 
-        </div>
-
-    </main>
+        </article>
 
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container footer-container">
+        <!-- ARTICLE SIDEBAR -->
+        <aside class="article-sidebar">
 
-            <div class="footer-brand">
-                <a href="index.html" class="logo">
-                    <span>Article<span class="logo-highlight">Hub</span></span>
+            <div class="sidebar-card">
+
+                <h3>About ArticleHub</h3>
+
+                <p>
+                    A platform for ideas, stories and knowledge.
+                    Explore informative articles from different
+                    fields and perspectives.
+                </p>
+
+                <a href="index.html#about">
+                    Learn more →
                 </a>
 
-                <p>Ideas. Stories. Knowledge.</p>
             </div>
 
-            <div class="footer-bottom">
-                <p>
-                    © <span id="current-year"></span> ArticleHub.
-                    All rights reserved.
-                </p>
+
+            <!-- TABLE OF CONTENTS -->
+            <div class="sidebar-card">
+
+                <h3>On This Page</h3>
+
+                <ul>
+                    <li><a href="#what-is-ai">What is AI?</a></li>
+                    <li><a href="#how-ai-works">How AI Works</a></li>
+                    <li><a href="#types-of-ai">Types of AI</a></li>
+                    <li><a href="#everyday-ai">Everyday AI</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#challenges">Challenges</a></li>
+                    <li><a href="#future-ai">The Future</a></li>
+                </ul>
+
             </div>
+
+
+            <!-- EXPLORE TOPICS -->
+            <div class="sidebar-card">
+
+                <h3>Explore Topics</h3>
+
+                <ul>
+                    <li><a href="index.html#explore">Technology</a></li>
+                    <li><a href="index.html#explore">Education</a></li>
+                    <li><a href="index.html#explore">Business</a></li>
+                    <li><a href="index.html#explore">Lifestyle</a></li>
+                    <li><a href="index.html#explore">Global Affairs</a></li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+    <!-- RELATED ARTICLES -->
+    <section class="related-articles">
+
+        <div class="section-heading">
+
+            <span>KEEP READING</span>
+
+            <h2>Related Articles</h2>
+
+            <p>
+                Discover more stories from ArticleHub.
+            </p>
 
         </div>
-    </footer>
 
 
-    <script src="js/main.js"></script>
+        <div class="related-grid">
+
+
+            <!-- RELATED ARTICLE 1 -->
+            <a href="post.html" class="related-card">
+
+                <img
+                    src="assets/images/future-technology.jpg"
+                    alt="Future technology"
+                    loading="lazy"
+                >
+
+                <span>TECHNOLOGY</span>
+
+                <h3>
+                    The Future of Technology and Innovation
+                </h3>
+
+                <p>
+                    Explore how emerging technologies
+                    are influencing our world.
+                </p>
+
+                <span class="related-link">
+                    Read Article →
+                </span>
+
+            </a>
+
+
+            <!-- RELATED ARTICLE 2 -->
+            <a href="post.html" class="related-card">
+
+                <img
+                    src="assets/images/digital-learning.jpg"
+                    alt="Digital learning"
+                    loading="lazy"
+                >
+
+                <span>EDUCATION</span>
+
+                <h3>
+                    How Digital Learning Is Changing Education
+                </h3>
+
+                <p>
+                    Discover how technology is creating
+                    new learning opportunities.
+                </p>
+
+                <span class="related-link">
+                    Read Article →
+                </span>
+
+            </a>
+
+
+            <!-- RELATED ARTICLE 3 -->
+            <a href="post.html" class="related-card">
+
+                <img
+                    src="assets/images/business-innovation.jpg"
+                    alt="Business innovation"
+                    loading="lazy"
+                >
+
+                <span>BUSINESS</span>
+
+                <h3>
+                    Innovation and the Modern Business World
+                </h3>
+
+                <p>
+                    Understand the role of innovation
+                    in modern organizations.
+                </p>
+
+                <span class="related-link">
+                    Read Article →
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+    <div class="container footer-container">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                <span>
+                    Article<span class="logo-highlight">Hub</span>
+                </span>
+            </a>
+
+            <p>Ideas. Stories. Knowledge.</p>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="current-year"></span>
+                ArticleHub. All rights reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- MAIN JAVASCRIPT -->
+<script src="js/main.js"></script>
+
+
+<!-- ARTICLE PAGE INTERACTIONS -->
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // SHARE ARTICLE
+
+    const shareButton = document.getElementById("share-article");
+
+    if (shareButton) {
+
+        shareButton.addEventListener("click", async function () {
+
+            const shareData = {
+
+                title: document.title,
+
+                text: "Understanding Artificial Intelligence: A Beginner's Guide",
+
+                url: window.location.href
+
+            };
+
+            if (navigator.share) {
+
+                try {
+                    await navigator.share(shareData);
+                } catch (error) {
+                    console.log("Sharing cancelled or unavailable.");
+                }
+
+            } else if (navigator.clipboard) {
+
+                try {
+
+                    await navigator.clipboard.writeText(window.location.href);
+
+                    shareButton.textContent = "Link Copied!";
+
+                    setTimeout(function () {
+                        shareButton.textContent = "Share Article";
+                    }, 2000);
+
+                } catch (error) {
+
+                    alert("Unable to copy the article link.");
+
+                }
+
+            } else {
+
+                alert("Sharing is not supported by this browser.");
+
+            }
+
+        });
+
+    }
+
+
+    // SMOOTH TABLE OF CONTENTS NAVIGATION
+
+    document.querySelectorAll(
+        '.article-table-of-contents a, .article-sidebar a[href^="#"]'
+    ).forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const target = document.querySelector(
+                this.getAttribute("href")
+            );
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+
+        });
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
