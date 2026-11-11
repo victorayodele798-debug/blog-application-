@@ -763,3 +763,131 @@ body.dark-mode .related-card p {
     }
 
 }
+
+/* ARTICLE FIGURES */
+
+.article-figure {
+    margin: 35px 0;
+}
+
+.article-figure img {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.article-figure figcaption {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--muted, #64748b);
+}
+
+
+/* TABLE OF CONTENTS */
+
+.article-table-of-contents {
+    margin: 35px 0 45px;
+    padding: 25px 30px;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 15px;
+    background: var(--surface, #f8fafc);
+}
+
+.article-table-of-contents h3 {
+    margin: 0 0 15px;
+    color: var(--text, #172033);
+}
+
+.article-table-of-contents ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.article-table-of-contents li {
+    margin-bottom: 10px;
+}
+
+.article-table-of-contents a {
+    color: var(--muted, #475569);
+    text-decoration: none;
+}
+
+.article-table-of-contents a:hover {
+    color: #2563eb;
+}
+
+
+/* ARTICLE SECTION SPACING */
+
+.article-content section {
+    scroll-margin-top: 100px;
+}
+
+
+/* RELATED ARTICLE IMAGES */
+
+.related-card {
+    overflow: hidden;
+    padding: 0;
+}
+
+.related-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.related-card > span,
+.related-card h3,
+.related-card p {
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.related-card > span:first-of-type {
+    margin-top: 20px;
+}
+
+.related-card .related-link {
+    margin-bottom: 20px;
+}
+
+
+/* DARK MODE ADDITIONS */
+
+body.dark-mode .article-table-of-contents {
+    background: var(--surface, #111c30);
+    border-color: var(--border, #24344d);
+}
+
+body.dark-mode .article-table-of-contents h3 {
+    color: var(--text, #f1f5f9);
+}
+
+body.dark-mode .article-table-of-contents a {
+    color: #cbd5e1;
+}
+
+
+/* SMALL SCREEN IMAGE ADJUSTMENTS */
+
+@media (max-width: 600px) {
+
+    .article-figure img {
+        max-height: 300px;
+    }
+
+    .article-table-of-contents {
+        padding: 20px;
+    }
+
+    .related-card img {
+        height: 200px;
+    }
+
+}
