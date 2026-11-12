@@ -1,0 +1,1121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Explore articles, discover new topics and read informative stories from the ArticleHub community.">
+
+    <title>Explore Articles | ArticleHub</title>
+
+    <!-- GLOBAL WEBSITE STYLES -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EXPLORE PAGE STYLES -->
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+        <div class="container header-inner">
+
+            <!-- ARTICLEHUB BRAND -->
+
+            <a href="index.html"
+               class="brand"
+               aria-label="ArticleHub home">
+
+                <svg class="brand-icon"
+                     viewBox="0 0 64 64"
+                     role="img"
+                     aria-label="ArticleHub logo">
+
+                    <defs>
+                        <linearGradient id="brandBlue"
+                                        x1="0" y1="0"
+                                        x2="1" y2="1">
+
+                            <stop offset="0%"
+                                  stop-color="#60A5FA"/>
+
+                            <stop offset="100%"
+                                  stop-color="#0755D9"/>
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                          fill="url(#brandBlue)"/>
+
+                    <path d="M7 47 Q20 40 32 51 Q44 40 57 47
+                             L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                          fill="#14284A"/>
+
+                    <path d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                          fill="none"
+                          stroke="#60A5FA"
+                          stroke-width="2.5"
+                          stroke-linecap="round"/>
+                </svg>
+
+                <span class="brand-text">
+                    Article<span>Hub.</span>
+                    <small>Ideas. Stories. Knowledge.</small>
+                </span>
+
+            </a>
+
+
+            <!-- MOBILE MENU -->
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="navigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="navigation" id="navigation">
+
+                <a href="index.html" class="nav-link">
+                    Home
+                </a>
+
+                <a href="explore.html"
+                   class="nav-link active"
+                   aria-current="page">
+                    Explore
+                </a>
+
+                <a href="index.html#publications"
+                   class="nav-link">
+                    Publications
+                </a>
+
+                <a href="index.html#about"
+                   class="nav-link">
+                    About
+                </a>
+
+                <a href="index.html#contact"
+                   class="nav-link">
+                    Contact
+                </a>
+
+                <div class="mobile-actions">
+
+                    <a href="login.html"
+                       class="btn btn-outline">
+                        Log in
+                    </a>
+
+                    <a href="register.html"
+                       class="btn btn-primary">
+                        Become a Contributor
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+                <button class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Toggle colour theme">
+
+                    <span id="theme-icon">☾</span>
+
+                </button>
+
+                <a href="login.html"
+                   class="btn btn-outline desktop-auth">
+                    Log in
+                </a>
+
+                <a href="register.html"
+                   class="btn btn-primary desktop-auth">
+                    Get Started
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+
+    <main class="explore-page">
+
+
+        <!-- =====================================
+             EXPLORE HERO
+        ====================================== -->
+
+        <section class="explore-hero">
+
+            <div class="container explore-hero-inner">
+
+                <div class="explore-hero-content">
+
+                    <span class="explore-eyebrow">
+                        DISCOVER ARTICLEHUB
+                    </span>
+
+                    <h1>
+                        Explore ideas.
+                        <span>Discover perspectives.</span>
+                    </h1>
+
+                    <p>
+                        Discover informative articles, explore
+                        different fields of knowledge and find
+                        perspectives that broaden your understanding
+                        of the world.
+                    </p>
+
+                    <a href="#explore-articles"
+                       class="btn btn-primary">
+                        Discover Articles →
+                    </a>
+
+                </div>
+
+
+                <div class="explore-hero-visual">
+
+                    <img
+                        src="assets/images/homepage-hero.jpg"
+                        alt="A reader exploring knowledge and technology"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ARTICLE SEARCH
+        ====================================== -->
+
+        <section class="explore-search-section">
+
+            <div class="container">
+
+                <div class="explore-search-wrapper">
+
+                    <div class="explore-search-heading">
+
+                        <span class="section-label">
+                            FIND SOMETHING INTERESTING
+                        </span>
+
+                        <h2>What would you like to explore?</h2>
+
+                        <p>
+                            Search for articles, topics and authors.
+                        </p>
+
+                    </div>
+
+
+                    <form class="explore-search-form"
+                          id="explore-search-form"
+                          role="search">
+
+                        <label for="explore-search"
+                               class="visually-hidden">
+                            Search articles, topics and authors
+                        </label>
+
+                        <div class="explore-search-input">
+
+                            <svg viewBox="0 0 24 24"
+                                 aria-hidden="true">
+
+                                <circle cx="11"
+                                        cy="11"
+                                        r="7"></circle>
+
+                                <path d="m16 16 4 4"></path>
+
+                            </svg>
+
+                            <input
+                                type="search"
+                                id="explore-search"
+                                placeholder="Search articles, topics or authors..."
+                                autocomplete="off"
+                            >
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                Search
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TOPIC DISCOVERY
+        ====================================== -->
+
+        <section class="explore-topics section"
+                 id="explore-topics">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            EXPLORE OUR CONTENT
+                        </span>
+
+                        <h2>Browse by Topic</h2>
+
+                        <p>
+                            Find content across different areas
+                            of interest and knowledge.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOPIC FILTERS -->
+
+                <div class="explore-topic-grid"
+                     id="explore-topic-grid">
+
+                    <button class="explore-topic-card active"
+                            type="button"
+                            data-topic="all"
+                            aria-pressed="true">
+
+                        <span class="topic-icon">✦</span>
+
+                        <strong>All Topics</strong>
+
+                        <small>Discover everything</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="technology"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">⌘</span>
+
+                        <strong>Technology</strong>
+
+                        <small>Innovation and computing</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="education"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">▤</span>
+
+                        <strong>Education</strong>
+
+                        <small>Learning and development</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="business"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">▣</span>
+
+                        <strong>Business</strong>
+
+                        <small>Enterprise and ideas</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="science"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">⚗</span>
+
+                        <strong>Science</strong>
+
+                        <small>Research and discovery</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="health"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">✚</span>
+
+                        <strong>Health</strong>
+
+                        <small>Health and wellbeing</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="global affairs"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">◎</span>
+
+                        <strong>Global Affairs</strong>
+
+                        <small>World and society</small>
+
+                    </button>
+
+
+                    <button class="explore-topic-card"
+                            type="button"
+                            data-topic="lifestyle"
+                            aria-pressed="false">
+
+                        <span class="topic-icon">♡</span>
+
+                        <strong>Lifestyle</strong>
+
+                        <small>Life and culture</small>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             INTERNATIONAL DAYS FEATURE
+        ====================================== -->
+
+        <section class="international-days-section section"
+                 id="international-days">
+
+            <div class="container">
+
+                <article class="international-days-card">
+
+                    <div class="international-days-visual">
+
+                        <img
+                            src="assets/images/future-technology.jpg"
+                            alt="A global perspective representing international cooperation"
+                            loading="lazy"
+                        >
+
+                        <span class="international-days-image-label">
+                            ARTICLEHUB SPECIAL PUBLICATION
+                        </span>
+
+                    </div>
+
+
+                    <div class="international-days-content">
+
+                        <span class="section-label">
+                            DISCOVER THE WORLD
+                        </span>
+
+                        <h2>
+                            International Days Editorials
+                        </h2>
+
+                        <p>
+                            Discover the meaning behind international
+                            observances, their history, global
+                            significance and the important issues
+                            they bring to our attention.
+                        </p>
+
+                        <ul class="international-days-benefits">
+
+                            <li>
+                                Explore important international observances.
+                            </li>
+
+                            <li>
+                                Understand their history and significance.
+                            </li>
+
+                            <li>
+                                Discover global issues and perspectives.
+                            </li>
+
+                        </ul>
+
+                        <a href="editorials/international-days/index.html"
+                           class="btn btn-primary">
+                            Explore International Days →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FUTURE COUNTRY AND LANGUAGE FEATURE -->
+
+                <div class="regional-discovery-card">
+
+                    <div class="regional-discovery-icon">
+                        ◎
+                    </div>
+
+                    <div class="regional-discovery-content">
+
+                        <span class="section-label">
+                            A MORE PERSONAL DISCOVERY EXPERIENCE
+                        </span>
+
+                        <h3>
+                            International Days, closer to you.
+                        </h3>
+
+                        <p>
+                            In the future, readers will be able to
+                            select their country and preferred language
+                            to discover relevant international
+                            observances and access information in
+                            languages they understand.
+                        </p>
+
+                        <span class="coming-soon-label">
+                            Regional and multilingual discovery
+                            — Coming in a future update
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LATEST ARTICLES
+        ====================================== -->
+
+        <section class="explore-articles-section section"
+                 id="explore-articles">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            FRESH PERSPECTIVES
+                        </span>
+
+                        <h2>Discover Articles</h2>
+
+                        <p>
+                            Explore stories, insights and knowledge
+                            from the ArticleHub community.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ARTICLE RESULTS INFORMATION -->
+
+                <div class="explore-results-header">
+
+                    <h3 id="explore-results-title">
+                        Latest Articles
+                    </h3>
+
+                    <p id="explore-results-count"
+                       aria-live="polite">
+                        Showing sample articles
+                    </p>
+
+                </div>
+
+
+                <!-- ARTICLE GRID -->
+
+                <div class="explore-article-grid"
+                     id="explore-article-grid">
+
+
+                    <!-- ARTICLE 1 -->
+
+                    <article class="explore-article-card"
+                             data-category="technology"
+                             data-title="Understanding Artificial Intelligence"
+                             data-author="ArticleHub Editorial Team">
+
+                        <a href="post.html"
+                           class="explore-article-image">
+
+                            <img
+                                src="assets/images/ai-technology.jpg"
+                                alt="Artificial intelligence and digital technology"
+                                loading="lazy"
+                            >
+
+                            <span class="article-image-category">
+                                TECHNOLOGY
+                            </span>
+
+                        </a>
+
+
+                        <div class="explore-article-content">
+
+                            <div class="explore-article-meta">
+                                <span>ArticleHub Editorial Team</span>
+                                <span>8 min read</span>
+                            </div>
+
+                            <h3>
+                                <a href="post.html">
+                                    Understanding Artificial Intelligence:
+                                    A Beginner's Guide
+                                </a>
+                            </h3>
+
+                            <p>
+                                Discover what artificial intelligence
+                                means, how it works and why it is
+                                becoming important in everyday life.
+                            </p>
+
+                            <a href="post.html"
+                               class="explore-read-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ARTICLE 2 -->
+
+                    <article class="explore-article-card"
+                             data-category="education"
+                             data-title="The Importance of Lifelong Learning"
+                             data-author="ArticleHub Editorial Team">
+
+                        <a href="post.html"
+                           class="explore-article-image">
+
+                            <img
+                                src="assets/images/digital-learning.jpg"
+                                alt="Digital learning and education"
+                                loading="lazy"
+                            >
+
+                            <span class="article-image-category">
+                                EDUCATION
+                            </span>
+
+                        </a>
+
+
+                        <div class="explore-article-content">
+
+                            <div class="explore-article-meta">
+                                <span>ArticleHub Editorial Team</span>
+                                <span>6 min read</span>
+                            </div>
+
+                            <h3>
+
+                                <a href="post.html">
+                                    The Importance of Lifelong Learning
+                                </a>
+                            </h3>
+
+                            <p>
+                                Understand why continuous learning
+                                matters in a rapidly changing world.
+                            </p>
+
+                            <a href="post.html"
+                               class="explore-read-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ARTICLE 3 -->
+
+                    <article class="explore-article-card"
+                             data-category="business"
+                             data-title="Turning Ideas into Meaningful Ventures"
+                             data-author="ArticleHub Editorial Team">
+
+                        <a href="post.html"
+                           class="explore-article-image">
+
+                            <img
+                                src="assets/images/business-innovation.jpg"
+                                alt="Business innovation and entrepreneurship"
+                                loading="lazy"
+                            >
+
+                            <span class="article-image-category">
+                                BUSINESS
+                            </span>
+
+                        </a>
+
+                        <div class="explore-article-content">
+
+                            <div class="explore-article-meta">
+                                <span>ArticleHub Editorial Team</span>
+                                <span>7 min read</span>
+                            </div>
+
+                            <h3>
+                                <a href="post.html">
+                                    Turning Ideas into Meaningful Ventures
+                                </a>
+                            </h3>
+
+                            <p>
+                                Explore how innovative ideas can
+                                develop into valuable products,
+                                services and businesses.
+                            </p>
+
+                            <a href="post.html"
+                               class="explore-read-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ARTICLE 4 -->
+
+                    <article class="explore-article-card"
+                             data-category="science"
+                             data-title="The Role of Scientific Research in Modern Society"
+                             data-author="ArticleHub Editorial Team">
+
+                        <a href="post.html"
+                           class="explore-article-image">
+
+                            <img
+                                src="assets/images/future-technology.jpg"
+                                alt="Scientific research and modern technology"
+                                loading="lazy"
+                            >
+
+                            <span class="article-image-category">
+                                SCIENCE
+                            </span>
+
+                        </a>
+
+                        <div class="explore-article-content">
+
+                            <div class="explore-article-meta">
+                                <span>ArticleHub Editorial Team</span>
+                                <span>5 min read</span>
+                            </div>
+
+                            <h3>
+                                <a href="post.html">
+                                    The Role of Scientific Research
+                                    in Modern Society
+                                </a>
+                            </h3>
+
+                            <p>
+                                Explore how scientific discoveries
+                                contribute to innovation and
+                                social development.
+                            </p>
+
+                            <a href="post.html"
+                               class="explore-read-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ARTICLE 5 -->
+
+                    <article class="explore-article-card"
+                             data-category="health"
+                             data-title="Understanding the Importance of Public Health"
+                             data-author="ArticleHub Editorial Team">
+
+                        <a href="post.html"
+                           class="explore-article-image">
+
+                            <img
+                                src="assets/images/ai-healthcare.jpg"
+                                alt="Healthcare professionals working together"
+                                loading="lazy"
+                            >
+
+                            <span class="article-image-category">
+                                HEALTH
+                            </span>
+
+                        </a>
+
+                        <div class="explore-article-content">
+
+                            <div class="explore-article-meta">
+                                <span>ArticleHub Editorial Team</span>
+                                <span>6 min read</span>
+                            </div>
+
+                            <h3>
+                                <a href="post.html">
+                                    Understanding the Importance
+                                    of Public Health
+                                </a>
+                            </h3>
+
+                            <p>
+                                Learn about the importance of
+                                prevention, awareness and
+                                community wellbeing.
+                            </p>
+
+                            <a href="post.html"
+                               class="explore-read-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ARTICLE 6 -->
+
+                    <article class="explore-article-card"
+                             data-category="global affairs"
+                             data-title="Understanding Global Cooperation"
+                             data-author="ArticleHub Editorial Team">
+
+                        <a href="post.html"
+                           class="explore-article-image">
+
+                            <img
+                                src="assets/images/homepage-hero.jpg"
+                                alt="People connecting through knowledge and technology"
+                                loading="lazy"
+                            >
+
+                            <span class="article-image-category">
+                                GLOBAL AFFAIRS
+                            </span>
+
+                        </a>
+
+                        <div class="explore-article-content">
+
+                            <div class="explore-article-meta">
+                                <span>ArticleHub Editorial Team</span>
+                                <span>5 min read</span>
+                            </div>
+
+                            <h3>
+                                <a href="post.html">
+                                    Understanding Global Cooperation
+                                </a>
+                            </h3>
+
+                            <p>
+                                Discover why international cooperation
+                                matters in addressing shared
+                                global challenges.
+                            </p>
+
+                            <a href="post.html"
+                               class="explore-read-link">
+                                Read Article →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- EMPTY SEARCH RESULT -->
+
+                <div class="explore-empty-state"
+                     id="explore-empty-state"
+                     hidden>
+
+                    <h3>No articles found</h3>
+
+                    <p>
+                        We couldn't find any articles matching
+                        your search. Try another keyword or topic.
+                    </p>
+
+                    <button type="button"
+                            class="btn btn-outline"
+                            id="clear-explore-filters">
+                        Clear Filters
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTRIBUTOR INVITATION
+        ====================================== -->
+
+        <section class="explore-contributor-section">
+
+            <div class="container">
+
+                <div class="explore-contributor-card">
+
+                    <div class="explore-contributor-content">
+
+                        <span class="section-label">
+                            SHARE YOUR KNOWLEDGE
+                        </span>
+
+                        <h2>
+                            Have an idea worth sharing?
+                        </h2>
+
+                        <p>
+                            Join the ArticleHub community and
+                            contribute meaningful articles,
+                            insights and perspectives.
+                        </p>
+
+                        <a href="register.html"
+                           class="btn btn-primary">
+                            Become a Contributor →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer article-footer">
+
+        <div class="container">
+
+            <div class="article-footer-main">
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html"
+                       class="brand"
+                       aria-label="ArticleHub home">
+
+                        <svg class="brand-icon"
+                             viewBox="0 0 64 64"
+                             role="img"
+                             aria-label="ArticleHub logo">
+
+                            <defs>
+                                <linearGradient id="footerBrandBlue"
+                                                x1="0" y1="0"
+                                                x2="1" y2="1">
+
+                                    <stop offset="0%"
+                                          stop-color="#60A5FA"/>
+
+                                    <stop offset="100%"
+                                          stop-color="#0755D9"/>
+
+                                </linearGradient>
+                            </defs>
+
+                            <path d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                                  fill="url(#footerBrandBlue)"/>
+
+                            <path d="M7 47 Q20 40 32 51 Q44 40 57 47
+                                     L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                                  fill="#14284A"/>
+
+                            <path d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                                  fill="none"
+                                  stroke="#60A5FA"
+                                  stroke-width="2.5"
+                                  stroke-linecap="round"/>
+
+                        </svg>
+
+                        <span class="brand-text">
+                            Article<span>Hub.</span>
+                            <small>Ideas. Stories. Knowledge.</small>
+                        </span>
+
+                    </a>
+
+                    <p>
+                        A platform for ideas, stories and knowledge.
+                        Discover perspectives that inform, inspire
+                        and expand your world.
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-links">
+
+                    <h3>Explore</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="explore.html">Explore Articles</a>
+                    <a href="index.html#publications">Publications</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#contact">Contact</a>
+
+                </div>
+
+
+                <!-- ACCOUNT LINKS -->
+
+                <div class="footer-links">
+
+                    <h3>Account</h3>
+
+                    <a href="login.html">Log in</a>
+                    <a href="register.html">Become a Contributor</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- COPYRIGHT -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="current-year"></span>
+                    ArticleHub. All rights reserved.
+                </p>
+
+                <p>
+                    Ideas. Stories. Knowledge.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- SHARED WEBSITE JAVASCRIPT -->
+
+    <script src="js/main.js"></script>
+
+    <!-- EXPLORE PAGE JAVASCRIPT -->
+
+    <script src="js/explore.js"></script>
+
+</body>
+</html>
+
+    
