@@ -24,72 +24,60 @@
      HEADER
 ===================================== -->
 
-<header class="site-header">
 
+
+<header class="site-header article-site-header">
     <div class="container header-container">
 
-        <a href="index.html" class="logo">
+        <!-- ARTICLEHUB BRAND -->
+        <a href="index.html" class="logo article-logo">
 
             <svg width="42" height="42" viewBox="0 0 42 42"
-                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                 fill="none" xmlns="http://www.w3.org/2000/svg"
+                 aria-label="ArticleHub logo">
 
-                <rect width="42" height="42" rx="12" fill="#2563EB"/>
-
-                <path d="M11 29V13L21 24L31 13V29"
-                      stroke="white"
-                      stroke-width="3"
-                      stroke-linecap="round"
+                <path d="M21 5 L38 36 H4 Z"
+                      stroke="#2563EB"
+                      stroke-width="3.5"
                       stroke-linejoin="round"/>
+
+                <path d="M21 17 L29 32 H13 Z"
+                      fill="#2563EB"/>
 
             </svg>
 
-            <span>Article<span class="logo-highlight">Hub</span></span>
+            <span>
+                Article<span class="logo-highlight">Hub</span>
+                <small class="article-logo-tagline">
+                    Ideas. Stories. Knowledge.
+                </small>
+            </span>
 
         </a>
 
-
+        <!-- MOBILE MENU -->
         <button class="menu-toggle"
                 id="menu-toggle"
                 aria-label="Toggle navigation">
-
             ☰
-
         </button>
 
-
-        <nav class="navigation" id="navigation">
-
+        <!-- SIMPLE NAVIGATION -->
+        <nav class="navigation article-navigation" id="navigation">
             <a href="index.html">Home</a>
-
             <a href="index.html#explore">Explore</a>
-
-            <a href="index.html#publications">Publications</a>
-
-            <a href="index.html#about">About</a>
-
-            <a href="index.html#contact">Contact</a>
-
         </nav>
 
-
-        <div class="header-actions">
-
+        <!-- THEME CONTROL -->
+        <div class="header-actions article-header-actions">
             <button class="theme-toggle"
                     id="theme-toggle"
                     aria-label="Switch theme">
-
                 <span id="theme-icon">☾</span>
-
             </button>
-
-            <a href="login.html" class="btn btn-outline">Login</a>
-
-            <a href="register.html" class="btn btn-primary">Get Started</a>
-
         </div>
 
     </div>
-
 </header>
 
 
