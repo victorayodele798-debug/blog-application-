@@ -1023,3 +1023,47 @@ body.dark-mode .article-table-of-contents a {
     }
 
 }
+/* ArticleHub brand in article header */
+
+.article-site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.article-site-header .brand-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.article-site-header .brand-text {
+    font-size: 22px;
+    font-weight: 800;
+    color: #14284A;
+    line-height: 1.1;
+}
+
+.article-site-header .brand-text span {
+    color: #0755D9;
+}
+
+.article-site-header .brand-text small {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+@media (max-width: 520px) {
+    .article-site-header .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .article-site-header .brand-text {
+        font-size: 19px;
+    }
+}
