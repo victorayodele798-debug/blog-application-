@@ -891,3 +891,135 @@ body.dark-mode .article-table-of-contents a {
     }
 
 }
+
+/* =================================
+   ARTICLE PAGE HEADER
+================================= */
+
+.article-site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--header-bg, #ffffff);
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+    backdrop-filter: blur(12px);
+}
+
+.article-site-header .header-container {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.article-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.article-logo > span {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-color, #172033);
+}
+
+.article-logo .logo-highlight {
+    color: #2563eb;
+}
+
+.article-logo-tagline {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    color: var(--muted-color, #64748b);
+}
+
+.article-navigation {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.article-navigation a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color, #172033);
+    transition: color 0.2s ease;
+}
+
+.article-navigation a:hover {
+    color: #2563eb;
+}
+
+.article-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.article-header-actions .theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* MOBILE HEADER */
+
+@media (max-width: 760px) {
+
+    .article-site-header .header-container {
+        min-height: 68px;
+        gap: 12px;
+    }
+
+    .article-logo svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .article-logo > span {
+        font-size: 18px;
+    }
+
+    .article-logo-tagline {
+        font-size: 9px;
+    }
+
+    .article-navigation {
+        gap: 18px;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .article-site-header .header-container {
+        flex-wrap: wrap;
+    }
+
+    .article-site-header .menu-toggle {
+        display: block;
+    }
+
+    .article-navigation {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 15px 0;
+    }
+
+    .article-navigation.active {
+        display: flex;
+    }
+
+}
