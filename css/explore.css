@@ -1,0 +1,1116 @@
+
+/* =====================================================
+   ARTICLEHUB — EXPLORE PAGE
+   File: css/explore.css
+===================================================== */
+
+
+/* =====================================================
+   1. PAGE FOUNDATION
+===================================================== */
+
+.explore-page {
+    width: 100%;
+    overflow: hidden;
+}
+
+.explore-page img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.explore-page a {
+    text-decoration: none;
+}
+
+.explore-page button,
+.explore-page input {
+    font: inherit;
+}
+
+.explore-page .section {
+    padding: 85px 0;
+}
+
+.explore-page .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.explore-page .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.explore-page .section-heading h2 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: clamp(27px, 4vw, 36px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.explore-page .section-heading p {
+    max-width: 600px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   2. EXPLORE HERO
+===================================================== */
+
+.explore-hero {
+    position: relative;
+    padding: 85px 0;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            var(--primary-soft),
+            transparent 35%
+        ),
+        var(--surface);
+}
+
+.explore-hero-inner {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.explore-hero-content {
+    max-width: 620px;
+}
+
+.explore-eyebrow {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.explore-hero-content h1 {
+    margin: 0 0 22px;
+    color: var(--text);
+    font-size: clamp(38px, 5vw, 61px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    font-weight: 850;
+}
+
+.explore-hero-content h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.explore-hero-content p {
+    max-width: 530px;
+    margin: 0 0 30px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.explore-hero-content .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 13px 23px;
+    border-radius: 10px;
+}
+
+.explore-hero-visual {
+    position: relative;
+    min-height: 360px;
+    height: 390px;
+    overflow: hidden;
+    border: 8px solid var(--bg);
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+}
+
+.explore-hero-visual img {
+    transition: transform .5s ease;
+}
+
+.explore-hero-visual:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   3. SEARCH SECTION
+===================================================== */
+
+.explore-search-section {
+    position: relative;
+    z-index: 2;
+    padding: 0 0 25px;
+    margin-top: -25px;
+}
+
+.explore-search-wrapper {
+    padding: 35px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.explore-search-heading {
+    margin-bottom: 22px;
+}
+
+.explore-search-heading .section-label {
+    margin-bottom: 8px;
+}
+
+.explore-search-heading h2 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.explore-search-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.explore-search-input {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 58px;
+    padding: 7px 8px 7px 17px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.explore-search-input:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.explore-search-input svg {
+    flex-shrink: 0;
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: var(--muted);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+}
+
+.explore-search-input input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 0;
+    color: var(--text);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.explore-search-input input::placeholder {
+    color: var(--muted);
+}
+
+.explore-search-input input:focus {
+    outline: none;
+}
+
+.explore-search-input button {
+    flex-shrink: 0;
+    min-height: 43px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   4. TOPIC DISCOVERY
+===================================================== */
+
+.explore-topics {
+    padding-top: 65px !important;
+}
+
+.explore-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.explore-topic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 155px;
+    padding: 22px;
+    text-align: left;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    cursor: pointer;
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.explore-topic-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.explore-topic-card.active {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+}
+
+.topic-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    margin-bottom: 17px;
+    color: var(--primary);
+    background: var(--surface);
+    border-radius: 12px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.explore-topic-card.active .topic-icon {
+    color: white;
+    background: var(--primary);
+}
+
+.explore-topic-card strong {
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.explore-topic-card small {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.explore-topic-card:focus-visible,
+.explore-search-input button:focus-visible,
+.explore-page a:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   5. INTERNATIONAL DAYS FEATURE
+===================================================== */
+
+.international-days-section {
+    padding-top: 45px !important;
+}
+
+.international-days-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+}
+
+.international-days-visual {
+    position: relative;
+    min-height: 410px;
+    overflow: hidden;
+}
+
+.international-days-visual img {
+    transition: transform .5s ease;
+}
+
+.international-days-card:hover
+.international-days-visual img {
+    transform: scale(1.04);
+}
+
+.international-days-image-label {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    padding: 10px 14px;
+    color: white;
+    background: rgba(8, 25, 55, .78);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.international-days-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 45px;
+}
+
+.international-days-content h2 {
+    margin: 0 0 18px;
+    color: var(--text);
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.2;
+    font-weight: 850;
+}
+
+.international-days-content > p {
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.international-days-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    width: 100%;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+}
+
+.international-days-benefits li {
+    position: relative;
+    padding-left: 26px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.international-days-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 900;
+}
+
+.international-days-content .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 47px;
+    padding: 12px 20px;
+    border-radius: 9px;
+}
+
+
+/* =====================================================
+   6. FUTURE REGIONAL DISCOVERY FEATURE
+===================================================== */
+
+.regional-discovery-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    margin-top: 24px;
+    padding: 30px;
+    background: var(--primary-soft);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+}
+
+.regional-discovery-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    color: white;
+    background: var(--primary);
+    border-radius: 14px;
+    font-size: 27px;
+}
+
+.regional-discovery-content {
+    flex: 1;
+}
+
+.regional-discovery-content .section-label {
+    margin-bottom: 9px;
+}
+
+.regional-discovery-content h3 {
+    margin: 0 0 10px;
+    color: var(--text);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.regional-discovery-content p {
+    max-width: 760px;
+    margin: 0 0 17px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.coming-soon-label {
+    display: inline-block;
+    padding: 8px 12px;
+    color: var(--primary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   7. ARTICLE DISCOVERY
+===================================================== */
+
+.explore-articles-section {
+    background: var(--surface);
+}
+
+.explore-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.explore-results-header h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.explore-results-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.explore-article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.explore-article-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.explore-article-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.explore-article-image {
+    position: relative;
+    display: block;
+    height: 215px;
+    overflow: hidden;
+    background: var(--surface-strong);
+}
+
+.explore-article-image img {
+    transition: transform .45s ease;
+}
+
+.explore-article-card:hover
+.explore-article-image img {
+    transform: scale(1.06);
+}
+
+.article-image-category {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    padding: 7px 11px;
+    color: white;
+    background: rgba(8, 25, 55, .82);
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .8px;
+}
+
+.explore-article-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+}
+
+.explore-article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.explore-article-meta span:last-child {
+    white-space: nowrap;
+}
+
+.explore-article-content h3 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+
+.explore-article-content h3 a {
+    color: inherit;
+    transition: color .2s ease;
+}
+
+.explore-article-content h3 a:hover {
+    color: var(--primary);
+}
+
+.explore-article-content > p {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.explore-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: auto;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+    transition: gap .2s ease;
+}
+
+.explore-read-link:hover {
+    gap: 12px;
+}
+
+
+/* =====================================================
+   8. EMPTY SEARCH STATE
+===================================================== */
+
+.explore-empty-state {
+    padding: 55px 20px;
+    text-align: center;
+    background: var(--bg);
+    border: 1px dashed var(--border);
+    border-radius: 15px;
+}
+
+.explore-empty-state[hidden] {
+    display: none;
+}
+
+.explore-empty-state h3 {
+    margin: 0 0 10px;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.explore-empty-state p {
+    max-width: 440px;
+    margin: 0 auto 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   9. CONTRIBUTOR INVITATION
+===================================================== */
+
+.explore-contributor-section {
+    padding: 75px 0;
+    background: var(--bg);
+}
+
+.explore-contributor-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 310px;
+    padding: 55px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(96, 165, 250, .22),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #0b1730,
+            #123d80
+        );
+    border-radius: 20px;
+}
+
+.explore-contributor-content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+}
+
+.explore-contributor-content .section-label {
+    color: #93c5fd;
+}
+
+.explore-contributor-content h2 {
+    margin: 0 0 15px;
+    color: white;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.2;
+    font-weight: 850;
+}
+
+.explore-contributor-content p {
+    max-width: 540px;
+    margin: 0 0 25px;
+    color: #dbeafe;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.explore-contributor-content .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 47px;
+    padding: 12px 21px;
+    color: #0b1730;
+    background: white;
+    border: 1px solid white;
+    border-radius: 9px;
+    font-weight: 800;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.explore-contributor-content .btn:hover {
+    transform: translateY(-2px);
+    background: #eaf1ff;
+}
+
+
+/* =====================================================
+   10. RESPONSIVE DESIGN — TABLETS
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .explore-hero-inner {
+        gap: 35px;
+    }
+
+    .explore-hero-visual {
+        height: 340px;
+        min-height: 340px;
+    }
+
+    .explore-topic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .explore-article-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .international-days-content {
+        padding: 32px;
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .explore-page .section {
+        padding: 65px 0;
+    }
+
+    .explore-hero {
+        padding: 60px 0 70px;
+    }
+
+    .explore-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .explore-hero-content {
+        max-width: 100%;
+    }
+
+    .explore-hero-content h1 {
+        font-size: clamp(36px, 8vw, 49px);
+    }
+
+    .explore-hero-content p {
+        font-size: 15px;
+    }
+
+    .explore-hero-visual {
+        height: 310px;
+        min-height: 310px;
+    }
+
+    .explore-search-section {
+        margin-top: -30px;
+    }
+
+    .explore-search-wrapper {
+        padding: 25px;
+    }
+
+    .explore-topic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .explore-topic-card {
+        min-height: 140px;
+        padding: 18px;
+    }
+
+    .international-days-card {
+        grid-template-columns: 1fr;
+    }
+
+    .international-days-visual {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .international-days-content {
+        padding: 30px;
+    }
+
+    .regional-discovery-card {
+        padding: 23px;
+    }
+
+    .explore-results-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .explore-article-grid {
+        gap: 18px;
+    }
+
+    .explore-article-image {
+        height: 185px;
+    }
+
+    .explore-article-content {
+        padding: 18px;
+    }
+
+    .explore-article-content h3 {
+        font-size: 17px;
+    }
+
+    .explore-contributor-card {
+        min-height: 280px;
+        padding: 35px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .explore-page .section {
+        padding: 55px 0;
+    }
+
+    .explore-hero {
+        padding: 48px 0 60px;
+    }
+
+    .explore-hero-content h1 {
+        font-size: 37px;
+        letter-spacing: -1.3px;
+    }
+
+    .explore-hero-content p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .explore-hero-visual {
+        height: 240px;
+        min-height: 240px;
+        border-width: 5px;
+        border-radius: 17px;
+    }
+
+    .explore-search-wrapper {
+        padding: 21px 16px;
+        border-radius: 14px;
+    }
+
+    .explore-search-heading h2 {
+        font-size: 20px;
+    }
+
+    .explore-search-heading p {
+        font-size: 13px;
+    }
+
+    .explore-search-input {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .explore-search-input svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .explore-search-input input {
+        width: calc(100% - 35px);
+        flex: 1;
+        font-size: 13px;
+    }
+
+    .explore-search-input button {
+        width: 100%;
+        min-height: 42px;
+    }
+
+    .explore-topic-grid {
+        gap: 10px;
+    }
+
+    .explore-topic-card {
+        min-height: 130px;
+        padding: 15px;
+    }
+
+    .topic-icon {
+        width: 37px;
+        height: 37px;
+        margin-bottom: 13px;
+        font-size: 20px;
+    }
+
+    .explore-topic-card strong {
+        font-size: 13px;
+    }
+
+    .explore-topic-card small {
+        font-size: 11px;
+    }
+
+    .international-days-visual {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .international-days-content {
+        padding: 23px 19px;
+    }
+
+    .international-days-content h2 {
+        font-size: 27px;
+    }
+
+    .international-days-content > p {
+        font-size: 13px;
+    }
+
+    .international-days-benefits li {
+        font-size: 12px;
+    }
+
+    .international-days-content .btn {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .regional-discovery-card {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .regional-discovery-content h3 {
+        font-size: 19px;
+    }
+
+    .regional-discovery-content p {
+        font-size: 13px;
+    }
+
+    .coming-soon-label {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .explore-article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .explore-article-image {
+        height: 220px;
+    }
+
+    .explore-article-content {
+        padding: 20px;
+    }
+
+    .explore-article-content h3 {
+        font-size: 19px;
+    }
+
+    .explore-article-content > p {
+        font-size: 13px;
+    }
+
+    .explore-contributor-section {
+        padding: 55px 0;
+    }
+
+    .explore-contributor-card {
+        min-height: 300px;
+        padding: 27px 22px;
+        border-radius: 15px;
+    }
+
+    .explore-contributor-content h2 {
+        font-size: 28px;
+    }
+
+    .explore-contributor-content p {
+        font-size: 13px;
+    }
+
+    .explore-contributor-content .btn {
+        width: 100%;
+        font-size: 13px;
+    }
+
+}
+
+
+/* 
+
+/* =====================================================
+   11. SMALL MOBILE DEVICES
+===================================================== */
+
+@media (max-width: 350px) {
+
+    .explore-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .explore-topic-card {
+        padding: 12px;
+    }
+
+    .explore-topic-card strong {
+        font-size: 12px;
+    }
+
+    .explore-topic-card small {
+        font-size: 10px;
+    }
+
+    .international-days-content h2 {
+        font-size: 24px;
+    }
+
+    .explore-article-meta {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   12. REDUCED MOTION ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .explore-page *,
+    .explore-page *::before,
+    .explore-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+}
