@@ -1,0 +1,1248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contributor Dashboard | ArticleHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contributor-dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="dashboard-page">
+
+    <!-- DASHBOARD HEADER -->
+    <header class="dashboard-header">
+
+        <div class="dashboard-header-inner">
+
+            <a href="index.html" class="brand" aria-label="ArticleHub home">
+
+                <svg class="brand-icon" viewBox="0 0 64 64"
+                     role="img" aria-label="ArticleHub logo">
+
+                    <defs>
+                        <linearGradient id="brandBlue" x1="0" y1="0"
+                            x2="1" y2="1">
+
+                            <stop offset="0%" stop-color="#60A5FA"/>
+                            <stop offset="100%" stop-color="#0755D9"/>
+
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                          fill="url(#brandBlue)"/>
+
+                    <path d="M7 47 Q20 40 32 51 Q44 40 57 47
+                             L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                          fill="#14284A"/>
+
+                    <path d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                          fill="none" stroke="#60A5FA"
+                          stroke-width="2.5" stroke-linecap="round"/>
+
+                </svg>
+
+                <span class="brand-text">
+                    Article<span>Hub.</span>
+                    <small>Ideas. Stories. Knowledge.</small>
+                </span>
+
+            </a>
+
+
+            <div class="dashboard-header-actions">
+
+                <a href="index.html" class="dashboard-home-link">
+                    Visit Website
+                </a>
+
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Switch theme">
+
+                    <span id="theme-icon" aria-hidden="true">☾</span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="dashboard-menu-toggle"
+                    id="dashboard-menu-toggle"
+                    aria-label="Open dashboard menu"
+                    aria-expanded="false">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- DASHBOARD LAYOUT -->
+    <div class="dashboard-layout">
+
+
+        <!-- SIDEBAR -->
+        <aside class="dashboard-sidebar" id="dashboard-sidebar">
+
+            <div class="sidebar-profile">
+
+                <div class="profile-avatar" aria-hidden="true">
+                    C
+                </div>
+
+                <div class="sidebar-profile-info">
+
+                    <h2>Contributor</h2>
+
+                    <p>ArticleHub Author</p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="dashboard-navigation"
+                 aria-label="Dashboard navigation">
+
+                <p class="sidebar-heading">WORKSPACE</p>
+
+                <a href="#overview"
+                   class="dashboard-nav-link active"
+                   data-section="overview"
+                   aria-current="page">
+
+                    <span class="nav-icon" aria-hidden="true">▦</span>
+                    <span>Overview</span>
+
+                </a>
+
+
+                <a href="#my-articles"
+                   class="dashboard-nav-link"
+                   data-section="my-articles">
+
+                    <span class="nav-icon" aria-hidden="true">▤</span>
+                    <span>My Articles</span>
+
+                    <span class="nav-count">4</span>
+
+                </a>
+
+
+                <a href="#notifications"
+                   class="dashboard-nav-link"
+                   data-section="notifications">
+
+                    <span class="nav-icon" aria-hidden="true">♧</span>
+                    <span>Notifications</span>
+
+                    <span class="notification-dot"></span>
+
+                </a>
+
+
+                <p class="sidebar-heading">ACCOUNT</p>
+
+
+                <a href="#my-profile"
+                   class="dashboard-nav-link"
+                   data-section="my-profile">
+
+                    <span class="nav-icon" aria-hidden="true">◎</span>
+                    <span>My Profile</span>
+
+                </a>
+
+
+                <a href="#settings"
+                   class="dashboard-nav-link"
+                   data-section="settings">
+
+                    <span class="nav-icon" aria-hidden="true">⚙</span>
+                    <span>Settings</span>
+
+                </a>
+
+
+                <a href="#guidelines"
+                   class="dashboard-nav-link"
+                   data-section="guidelines">
+
+                    <span class="nav-icon" aria-hidden="true">ⓘ</span>
+                    <span>Author Guidelines</span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help-card">
+
+                    <span class="help-icon" aria-hidden="true">?</span>
+
+                    <h3>Need assistance?</h3>
+
+                    <p>
+                        Have questions about publishing or your account?
+                    </p>
+
+                    <a href="contact.html">
+                        Contact Support
+                    </a>
+
+                </div>
+
+
+                <a href="login.html" class="dashboard-logout-link">
+
+                    <span aria-hidden="true">↪</span>
+                    Sign Out
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN DASHBOARD CONTENT -->
+        <main class="dashboard-main" id="dashboard-main">
+
+
+            <!-- OVERVIEW SECTION -->
+            <section class="dashboard-section active"
+                     id="overview"
+                     data-dashboard-section="overview">
+
+                <div class="dashboard-welcome">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">
+                            CONTRIBUTOR WORKSPACE
+                        </p>
+
+                        <h1>Welcome back, Contributor.</h1>
+
+                        <p>
+                            Manage your articles, track submissions,
+                            and continue sharing valuable ideas with
+                            the ArticleHub community.
+                        </p>
+
+                    </div>
+
+
+                    <a href="article-submission.html"
+                       class="dashboard-primary-button">
+
+                        <span aria-hidden="true">＋</span>
+                        Write New Article
+
+                    </a>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+                <div class="dashboard-stats">
+
+                    <article class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+                            <span>Total Articles</span>
+                            <span class="stat-icon">▤</span>
+                        </div>
+
+                        <h2>04</h2>
+
+                        <p>Articles in your workspace</p>
+
+                    </article>
+
+
+                    <article class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+                            <span>Published</span>
+                            <span class="stat-icon">✓</span>
+                        </div>
+
+                        <h2>01</h2>
+
+                        <p>Available to readers</p>
+
+                    </article>
+
+
+                    <article class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+                            <span>Pending Review</span>
+                            <span class="stat-icon">◷</span>
+                        </div>
+
+                        <h2>01</h2>
+
+                        <p>Awaiting editorial review</p>
+
+                    </article>
+
+
+                    <article class="dashboard-stat-card">
+
+                        <div class="stat-card-top">
+                            <span>Drafts</span>
+                            <span class="stat-icon">✎</span>
+                        </div>
+
+                        <h2>02</h2>
+
+                        <p>Saved but not submitted</p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- RECENT ARTICLES -->
+                <section class="dashboard-panel recent-articles-panel"
+                         aria-labelledby="recent-articles-heading">
+
+                    <div class="dashboard-panel-header">
+
+                        <div>
+
+                            <p class="panel-eyebrow">YOUR CONTENT</p>
+
+                            <h2 id="recent-articles-heading">
+                                Recent Articles
+                            </h2>
+
+                        </div>
+
+                        <a href="#my-articles"
+                           class="dashboard-text-link"
+                           data-section-link="my-articles">
+
+                            View All Articles →
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="dashboard-article-list">
+
+
+                        <article class="dashboard-article-item">
+
+                            <div class="article-placeholder-image">
+                                AI
+                            </div>
+
+                            <div class="dashboard-article-info">
+
+                                <h3>
+                                    The Growing Influence of Artificial
+                                    Intelligence in Modern Society
+                                </h3>
+
+                                <p>
+                                    Technology
+                                    <span>•</span>
+                                    November 12, 2026
+                                </p>
+
+                            </div>
+
+                            <span class="article-status status-published">
+                                Published
+                            </span>
+
+                        </article>
+
+
+                        <article class="dashboard-article-item">
+
+                            <div class="article-placeholder-image">
+                                ED
+                            </div>
+
+                            <div class="dashboard-article-info">
+
+                                <h3>
+                                    The Future of Digital Learning
+                                </h3>
+
+                                <p>
+                                    Education
+                                    <span>•</span>
+                                    November 10, 2026
+                                </p>
+
+                            </div>
+
+                            <span class="article-status status-pending">
+                                Pending Review
+                            </span>
+
+                        </article>
+
+
+                        <article class="dashboard-article-item">
+
+                            <div class="article-placeholder-image">
+                                IN
+                            </div>
+
+                            <div class="dashboard-article-info">
+
+                                <h3>
+                                    Innovation and the Next Generation
+                                </h3>
+
+                                <p>
+                                    Business
+                                    <span>•</span>
+                                    November 8, 2026
+                                </p>
+
+                            </div>
+
+                            <span class="article-status status-draft">
+                                Draft
+                            </span>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- LOWER DASHBOARD GRID -->
+                <div class="dashboard-lower-grid">
+
+
+                    <!-- QUICK ACTIONS -->
+                    <section class="dashboard-panel quick-actions-panel">
+
+                        <div class="dashboard-panel-header">
+
+                            <div>
+
+                                <p class="panel-eyebrow">GET STARTED</p>
+
+                                <h2>Quick Actions</h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions-list">
+
+                            <a href="article-submission.html"
+                               class="quick-action-item">
+
+                                <span class="quick-action-icon">＋</span>
+
+                                <span>
+                                    <strong>Write an Article</strong>
+                                    <small>Create and submit new content</small>
+                                </span>
+
+                                <span class="action-arrow">→</span>
+
+                            </a>
+
+
+                            <a href="explore.html"
+                               class="quick-action-item">
+
+                                <span class="quick-action-icon">⌕</span>
+
+                                <span>
+                                    <strong>Explore Articles</strong>
+                                    <small>Discover published content</small>
+                                </span>
+
+                                <span class="action-arrow">→</span>
+
+                            </a>
+
+
+                            <a href="contact.html"
+                               class="quick-action-item">
+
+                                <span class="quick-action-icon">?</span>
+
+                                <span>
+                                    <strong>Get Support</strong>
+                                    <small>Contact the ArticleHub team</small>
+                                </span>
+
+                                <span class="action-arrow">→</span>
+
+                            </a>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- NOTIFICATIONS PREVIEW -->
+                    <section class="dashboard-panel notifications-panel">
+
+                        <div class="dashboard-panel-header">
+
+                            <div>
+
+                                <p class="panel-eyebrow">UPDATES</p>
+
+                                <h2>Notifications</h2>
+
+                            </div>
+
+                            <a href="#notifications"
+                               class="dashboard-text-link"
+                               data-section-link="notifications">
+
+                                View All
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="notification-preview">
+
+                            <span class="notification-icon">✓</span>
+
+                            <div>
+
+                                <h3>Welcome to ArticleHub</h3>
+
+                                <p>
+                                    Your contributor workspace is ready.
+                                </p>
+
+                                <small>Welcome message</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="notification-preview">
+
+                            <span class="notification-icon">◷</span>
+
+                            <div>
+
+                                <h3>Submission under review</h3>
+
+                                <p>
+                                    Your submitted article is awaiting
+                                    editorial review.
+                                </p>
+
+                                <small>Sample notification</small>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+            <!-- MY ARTICLES SECTION -->
+            <section class="dashboard-section"
+                     id="my-articles"
+                     data-dashboard-section="my-articles">
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">CONTENT MANAGEMENT</p>
+
+                        <h1>My Articles</h1>
+
+                        <p>
+                            Manage your drafts, submissions, and
+                            published articles.
+                        </p>
+
+                    </div>
+
+                    <a href="article-submission.html"
+                       class="dashboard-primary-button">
+
+                        ＋ Write New Article
+
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-panel">
+
+                    <div class="article-management-header">
+
+                        <div>
+
+                            <h2>Your Content Library</h2>
+
+                            <p>
+                                Review the current status of your articles.
+                            </p>
+
+                        </div>
+
+
+                        <div class="article-filter">
+
+                            <label for="article-status-filter">
+                                Filter by status
+                            </label>
+
+                            <select id="article-status-filter">
+
+                                <option value="all">All Articles</option>
+                                <option value="published">Published</option>
+                                <option value="pending">Pending Review</option>
+                                <option value="draft">Drafts</option>
+                                <option value="rejected">Rejected</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-articles-table-wrapper">
+
+                        <table class="dashboard-articles-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Article</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="dashboard-articles-body">
+
+                                <tr data-status="published">
+
+                                    <td>
+                                        <strong>
+                                            The Growing Influence of AI
+                                        </strong>
+                                    </td>
+
+                                    <td>Technology</td>
+
+                                    <td>Nov 12, 2026</td>
+
+                                    <td>
+                                        <span class="article-status status-published">
+                                            Published
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="post.html"
+                                           class="table-action-link">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-status="pending">
+
+                                    <td>
+                               
+                                        <a href="post.html"
+                                           class="table-action-link">
+                                            View
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-status="pending">
+
+                                    <td>
+                                        <strong>
+                                            The Future of Digital Learning
+                                        </strong>
+                                    </td>
+
+                                    <td>Education</td>
+
+                                    <td>Nov 10, 2026</td>
+
+                                    <td>
+                                        <span class="article-status status-pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <span class="table-muted-action">
+                                            Under Review
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-status="draft">
+
+                                    <td>
+                                        <strong>
+                                            Innovation and the Next Generation
+                                        </strong>
+                                    </td>
+
+                                    <td>Business</td>
+
+                                    <td>Nov 8, 2026</td>
+
+                                    <td>
+                                        <span class="article-status status-draft">
+                                            Draft
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="article-submission.html"
+                                           class="table-action-link">
+                                            Continue
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-status="draft">
+
+                                    <td>
+                                        <strong>
+                                            Technology and Society
+                                        </strong>
+                                    </td>
+
+                                    <td>Science</td>
+
+                                    <td>Nov 6, 2026</td>
+
+                                    <td>
+                                        <span class="article-status status-draft">
+                                            Draft
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="article-submission.html"
+                                           class="table-action-link">
+                                            Continue
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <p class="dashboard-demo-note">
+                        These are demonstration records. Your actual
+                        articles will appear here after backend integration.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- NOTIFICATIONS SECTION -->
+            <section class="dashboard-section"
+                     id="notifications"
+                     data-dashboard-section="notifications">
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">ACCOUNT UPDATES</p>
+
+                        <h1>Notifications</h1>
+
+                        <p>
+                            Stay informed about your articles and
+                            contributor account.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel">
+
+                    <div class="notification-full-item">
+
+                        <span class="notification-icon">✓</span>
+
+                        <div>
+
+                            <h3>Welcome to ArticleHub</h3>
+
+                            <p>
+                                Your contributor dashboard is ready.
+                                You can now explore your workspace and
+                                prepare articles for submission.
+                            </p>
+
+                            <small>Welcome notification</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="notification-full-item">
+
+                        <span class="notification-icon">◷</span>
+
+                        <div>
+
+                            <h3>Article awaiting review</h3>
+
+                            <p>
+                                Your article submission is currently
+                                awaiting editorial review.
+                            </p>
+
+                            <small>Sample notification</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE SECTION -->
+            <section class="dashboard-section"
+                     id="my-profile"
+                     data-dashboard-section="my-profile">
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">ACCOUNT INFORMATION</p>
+
+                        <h1>My Profile</h1>
+
+                        <p>
+                            Manage the information associated with
+                            your contributor profile.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel profile-panel">
+
+                    <div class="profile-large-avatar">
+                        C
+                    </div>
+
+                    <div class="profile-details">
+
+                        <h2>Contributor</h2>
+
+                        <p>ArticleHub Contributor</p>
+
+                        <span class="profile-role-label">
+                            Author Account
+                        </span>
+
+                    </div>
+
+
+                    <div class="profile-information">
+
+                        <div class="profile-information-item">
+
+                            <span>Full Name</span>
+
+                            <strong>Not configured</strong>
+
+                        </div>
+
+
+                        <div class="profile-information-item">
+
+                            <span>Email Address</span>
+
+                            <strong>Not configured</strong>
+
+                        </div>
+
+
+                        <div class="profile-information-item">
+
+                            <span>Username</span>
+
+                            <strong>Not configured</strong>
+
+                        </div>
+
+
+                        <div class="profile-information-item">
+
+                            <span>Account Type</span>
+
+                            <strong>Contributor</strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="dashboard-demo-note">
+                        Profile editing will be enabled when account
+                        management is connected to the backend.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SETTINGS SECTION -->
+            <section class="dashboard-section"
+                     id="settings"
+                     data-dashboard-section="settings">
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">PREFERENCES</p>
+
+                        <h1>Settings</h1>
+
+                        <p>
+                            Manage your contributor workspace preferences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel settings-panel">
+
+                    <div class="settings-item">
+
+                        <div>
+
+                            <h3>Appearance</h3>
+
+                            <p>
+                                Choose the appearance of your dashboard.
+                                You can also use the theme control in
+                                the header.
+                            </p>
+
+                        </div>
+
+                        <span class="settings-status">
+                            System-aware theme
+                        </span>
+
+                    </div>
+
+
+                    <div class="settings-item">
+
+                        <div>
+
+                            <h3>Email Notifications</h3>
+
+                            <p>
+                                Receive updates about article reviews
+                                and account activity.
+                            </p>
+
+                        </div>
+
+                        <span class="settings-status">
+                            Coming soon
+                        </span>
+
+                    </div>
+
+
+                    <div class="settings-item">
+
+                        <div>
+
+                            <h3>Account Security</h3>
+
+                            <p>
+                                Password and account security controls
+                                will be managed through the secure
+                                account system.
+                            </p>
+
+                        </div>
+
+                        <span class="settings-status">
+                            Coming soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- GUIDELINES SECTION -->
+            <section class="dashboard-section"
+                     id="guidelines"
+                     data-dashboard-section="guidelines">
+
+                <div class="dashboard-page-heading">
+
+                    <div>
+
+                        <p class="dashboard-eyebrow">PUBLISHING RESOURCES</p>
+
+                        <h1>Author Guidelines</h1>
+
+                        <p>
+                            Important principles for publishing
+                            quality content on ArticleHub.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-panel guidelines-panel">
+
+                    <article class="guideline-item">
+
+                        <span class="guideline-number">01</span>
+
+                        <div>
+
+                            <h3>Originality and Accuracy</h3>
+
+                            <p>
+                                Submit original work and ensure that
+                                factual claims are accurate and
+                                supported by reliable sources.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guideline-item">
+
+                        <span class="guideline-number">02</span>
+
+                        <div>
+
+                            <h3>Clear Writing</h3>
+
+                            <p>
+                                Use clear language, meaningful
+                                paragraphs, descriptive headings,
+                                and an appropriate structure.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guideline-item">
+
+                        <span class="guideline-number">03</span>
+
+                        <div>
+
+                            <h3>Respect Copyright</h3>
+
+                            <p>
+                                Do not publish material that belongs
+                                to others without permission or
+                                appropriate attribution.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guideline-item">
+
+                        <span class="guideline-number">04</span>
+
+                        <div>
+
+                            <h3>Use Appropriate Images</h3>
+
+                            <p>
+                                Only submit images you have the right
+                                to use. Provide meaningful descriptions
+                                for accessibility.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guideline-item">
+
+                        <span class="guideline-number">05</span>
+
+                        <div>
+
+                            <h3>Editorial Review</h3>
+
+                            <p>
+                                Submitted articles may be reviewed
+                                before publication. An article is
+                                not publicly available until approved.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="guideline-item">
+
+                        <span class="guideline-number">06</span>
+
+                        <div>
+
+                            <h3>Professional Conduct</h3>
+
+                            <p>
+                                Avoid harmful, misleading,
+                                discriminatory, or abusive content.
+                                Respect readers and other contributors.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <div class="guidelines-footer">
+
+                        <p>
+                            Need clarification about a publishing rule?
+                        </p>
+
+                        <a href="contact.html">
+                            Contact ArticleHub Support →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DASHBOARD FOOTER -->
+            <footer class="dashboard-footer">
+
+                <p>
+                    © <span id="current-year"></span>
+                    ArticleHub. All rights reserved.
+                </p>
+
+                <div>
+
+                    <a href="terms.html">Terms</a>
+
+                    <a href="privacy.html">Privacy</a>
+
+                    <a href="contact.html">Support</a>
+
+                </div>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- SHARED AND PAGE SCRIPTS -->
+    <script src="js/main.js"></script>
+    <script src="js/contributor-dashboard.js"></script>
+
+</body>
+</html>
+       
