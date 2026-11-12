@@ -1067,3 +1067,23 @@ body.dark-mode .article-table-of-contents a {
         font-size: 19px;
     }
 }
+
+/* ARTICLE AUTHOR BRAND LOGO */
+
+.article-author .author-avatar {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.article-author .author-avatar svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
