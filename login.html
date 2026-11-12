@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Sign in to your ArticleHub account to access your editorial workspace.">
+
+    <title>Sign In | ArticleHub</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Global Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Login Page Stylesheet -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="login-page">
+
+    <!-- HEADER -->
+    <header class="login-header">
+        <div class="container login-header-container">
+
+            <!-- ARTICLEHUB BRAND -->
+            <a href="index.html" class="brand" aria-label="ArticleHub home">
+
+                <svg class="brand-icon"
+                     viewBox="0 0 64 64"
+                     role="img"
+                     aria-label="ArticleHub logo">
+
+                    <defs>
+                        <linearGradient id="brandBlue"
+                                        x1="0" y1="0"
+                                        x2="1" y2="1">
+
+                            <stop offset="0%" stop-color="#60A5FA"/>
+                            <stop offset="100%" stop-color="#0755D9"/>
+
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                          fill="url(#brandBlue)"/>
+
+                    <path d="M7 47 Q20 40 32 51 Q44 40 57 47
+                             L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                          fill="#14284A"/>
+
+                    <path d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                          fill="none"
+                          stroke="#60A5FA"
+                          stroke-width="2.5"
+                          stroke-linecap="round"/>
+
+                </svg>
+
+                <span class="brand-text">
+                    Article<span>Hub.</span>
+                    <small>Ideas. Stories. Knowledge.</small>
+                </span>
+
+            </a>
+
+            <!-- HEADER ACTIONS -->
+            <div class="login-header-actions">
+
+                <a href="index.html" class="login-home-link">
+                    Back to Home
+                </a>
+
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Switch theme">
+
+                    <span id="theme-icon" aria-hidden="true">◐</span>
+
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN LOGIN SECTION -->
+    <main class="login-main">
+
+        <div class="container login-container">
+
+            <!-- LEFT BRAND PANEL -->
+            <section class="login-intro">
+
+                <span class="login-eyebrow">
+                    ARTICLEHUB WORKSPACE
+                </span>
+
+                <h1>
+                    Your ideas deserve
+                    <span>a place to grow.</span>
+                </h1>
+
+                <p>
+                    Sign in to access your ArticleHub workspace,
+                    manage your publications, and continue creating
+                    meaningful stories.
+                </p>
+
+                <div class="login-intro-divider"></div>
+
+                <div class="login-benefits">
+
+                    <div class="login-benefit">
+                        <span class="benefit-icon" aria-hidden="true">
+                            01
+                        </span>
+
+                        <div>
+                            <h3>Editorial Workspace</h3>
+                            <p>Access your writing and publishing environment.</p>
+                        </div>
+                    </div>
+
+                    <div class="login-benefit">
+                        <span class="benefit-icon" aria-hidden="true">
+                            02
+                        </span>
+
+                        <div>
+                            <h3>Manage Your Content</h3>
+                            <p>Continue working on your articles and stories.</p>
+                        </div>
+                    </div>
+
+                    <div class="login-benefit">
+                        <span class="benefit-icon" aria-hidden="true">
+                            03
+                        </span>
+
+                        <div>
+                            <h3>One Connected Platform</h3>
+                            <p>A shared workspace for authors and administrators.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- LOGIN FORM PANEL -->
+            <section class="login-form-section">
+
+                <div class="login-card">
+
+                    <div class="login-card-heading">
+
+                        <span class="login-card-label">
+                            WELCOME BACK
+                        </span>
+
+                        <h2>Sign in to ArticleHub</h2>
+
+                        <p>
+                            Enter your account details to continue.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+                    <form id="login-form" novalidate>
+
+                        <!-- EMAIL -->
+                        <div class="form-group">
+
+                            <label for="login-email">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="login-email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+                        <div class="form-group">
+
+                            <div class="password-label-row">
+
+                                <label for="login-password">
+                                    Password
+                                </label>
+
+                                <a href="forgot-password.html"
+                                   class="forgot-password-link">
+
+                                    Forgot password?
+
+                                </a>
+
+                            </div>
+
+                            <div class="password-input-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="login-password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    id="toggle-password"
+                                    class="password-toggle"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+
+                                    <svg
+                                        id="password-eye-icon"
+                                        viewBox="0 0 24 24"
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true">
+
+                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REMEMBER ME -->
+                        <div class="login-options">
+
+                            <label class="remember-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="remember-me"
+                                    name="remember">
+
+                                <span>Remember me</span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- FORM STATUS -->
+                        <div
+                            id="login-message"
+                            class="login-message"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+
+                        <!-- SUBMIT BUTTON -->
+                        <button
+                            type="submit"
+                            id="login-submit"
+                            class="login-submit-button">
+
+                            <span class="button-text">
+                                Sign In
+                            </span>
+
+                            <span class="button-arrow" aria-hidden="true">
+                                →
+                            </span>
+
+                        </button>
+
+                    </form>
+
+
+                    <!-- REGISTRATION LINK -->
+                    <div class="login-register">
+
+                        <p>
+                            Don't have an account?
+
+                            <a href="register.html">
+                                Register as an author
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                    <!-- SECURITY NOTE -->
+                    <div class="login-security-note">
+
+                        <span aria-hidden="true">●</span>
+
+                        <p>
+                            Authorized access for registered
+                            ArticleHub users.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="login-footer">
+
+        <div class="container login-footer-container">
+
+            <p>
+                © <span id="current-year"></span>
+                ArticleHub. All rights reserved.
+            </p>
+
+            <p>
+                Ideas. Stories. Knowledge.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- GLOBAL JAVASCRIPT -->
+    <script src="js/main.js"></script>
+
+    <!-- LOGIN PAGE JAVASCRIPT -->
+    <script src="js/login.js"></script>
+
+</body>
+</html>
