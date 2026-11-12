@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Create your ArticleHub author account and join our editorial community.">
+
+    <title>Create Account | ArticleHub</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Registration Styles -->
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body class="register-page">
+
+    <!-- HEADER -->
+    <header class="register-header">
+
+        <div class="container register-header-container">
+
+            <!-- ARTICLEHUB BRAND -->
+            <a href="index.html" class="brand" aria-label="ArticleHub home">
+
+                <svg class="brand-icon"
+                     viewBox="0 0 64 64"
+                     role="img"
+                     aria-label="ArticleHub logo">
+
+                    <defs>
+                        <linearGradient id="brandBlue"
+                                        x1="0" y1="0"
+                                        x2="1" y2="1">
+
+                            <stop offset="0%" stop-color="#60A5FA"/>
+                            <stop offset="100%" stop-color="#0755D9"/>
+
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                          fill="url(#brandBlue)"/>
+
+                    <path d="M7 47 Q20 40 32 51 Q44 40 57 47
+                             L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                          fill="#14284A"/>
+
+                    <path d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                          fill="none"
+                          stroke="#60A5FA"
+                          stroke-width="2.5"
+                          stroke-linecap="round"/>
+
+                </svg>
+
+                <span class="brand-text">
+                    Article<span>Hub.</span>
+                    <small>Ideas. Stories. Knowledge.</small>
+                </span>
+
+            </a>
+
+
+            <!-- HEADER ACTIONS -->
+            <div class="register-header-actions">
+
+                <a href="index.html" class="register-home-link">
+                    Back to Home
+                </a>
+
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Switch theme">
+
+                    <span id="theme-icon" aria-hidden="true">◐</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="register-main">
+
+        <div class="container register-container">
+
+
+            <!-- INTRODUCTION -->
+            <section class="register-intro">
+
+                <span class="register-eyebrow">
+                    JOIN ARTICLEHUB
+                </span>
+
+                <h1>
+                    Give your ideas
+                    <span>a platform.</span>
+                </h1>
+
+                <p>
+                    Become part of a growing editorial community
+                    where knowledge, creativity, and meaningful
+                    storytelling come together.
+                </p>
+
+                <div class="register-intro-divider"></div>
+
+
+                <!-- REGISTRATION BENEFITS -->
+                <div class="register-benefits">
+
+                    <div class="register-benefit">
+
+                        <span class="register-benefit-number">01</span>
+
+                        <div>
+                            <h3>Create Your Author Profile</h3>
+                            <p>Establish your identity within ArticleHub.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-benefit">
+
+                        <span class="register-benefit-number">02</span>
+
+                        <div>
+                            <h3>Develop Your Ideas</h3>
+                            <p>Prepare meaningful content for publication.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="register-benefit">
+
+                        <span class="register-benefit-number">03</span>
+
+                        <div>
+                            <h3>Join the Editorial Community</h3>
+                            <p>Become part of our growing author network.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- REGISTRATION FORM -->
+            <section class="register-form-section">
+
+                <div class="register-card">
+
+
+                    <!-- FORM HEADING -->
+                    <div class="register-card-heading">
+
+                        <span class="register-card-label">
+                            GET STARTED
+                        </span>
+
+                        <h2>Create your account</h2>
+
+                        <p>
+                            Complete the information below to register
+                            as an ArticleHub author.
+                        </p>
+
+                    </div>
+
+
+
+                    <form id="register-form" novalidate>
+
+
+                        <!-- FULL NAME -->
+                        <div class="register-form-group">
+
+                            <label for="register-name">
+                                Full name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="register-name"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                maxlength="80"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+                        <div class="register-form-group">
+
+                            <label for="register-email">
+                                Email address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="register-email"
+                                name="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                maxlength="254"
+                                required>
+
+                        </div>
+
+
+
+                        <!-- USERNAME -->
+                        <div class="register-form-group">
+
+                            <label for="register-username">
+                                Username
+                            </label>
+
+                            <input
+                                type="text"
+                                id="register-username"
+                                name="username"
+                                placeholder="Choose a username"
+                                autocomplete="username"
+                                minlength="3"
+                                maxlength="30"
+                                pattern="[A-Za-z0-9_]+"
+                                required>
+
+                            <small class="field-hint">
+                                Use 3–30 letters, numbers, or underscores.
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- PASSWORD -->
+                        <div class="register-form-group">
+
+                            <label for="register-password">
+                                Password
+                            </label>
+
+                            <div class="register-password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="register-password"
+                                    name="password"
+                                    placeholder="Create a password"
+                                    autocomplete="new-password"
+                                    minlength="8"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="register-password-toggle"
+                                    data-password-target="register-password"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true">
+
+                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                            <small class="field-hint">
+                                Use at least 8 characters.
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- CONFIRM PASSWORD -->
+                        <div class="register-form-group">
+
+                            <label for="register-confirm-password">
+                                Confirm password
+                            </label>
+
+                            <div class="register-password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="register-confirm-password"
+                                    name="confirmPassword"
+                                    placeholder="Enter your password again"
+                                    autocomplete="new-password"
+                                    minlength="8"
+                                    required>
+
+                                <button
+                                    type="button"
+                                    class="register-password-toggle"
+                                    data-password-target="register-confirm-password"
+                                    aria-label="Show password"
+                                    aria-pressed="false">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        width="20"
+                                        height="20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        aria-hidden="true">
+
+                                        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/>
+
+                                        <circle cx="12" cy="12" r="3"/>
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- TERMS -->
+                        <div class="register-terms">
+
+                            <label for="register-terms">
+
+                                <input
+                                    type="checkbox"
+                                    id="register-terms"
+                                    name="terms"
+                                    required>
+
+                                <span>
+                                    I agree to the
+                                    <a href="terms.html">Terms of Service</a>
+                                    and
+                                    <a href="privacy.html">Privacy Policy</a>.
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- FEEDBACK -->
+                        <div
+                            id="register-message"
+                            class="register-message"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+                        <button
+                            type="submit"
+                            id="register-submit"
+                            class="register-submit-button">
+
+                            <span>Create Account</span>
+
+                            <span aria-hidden="true">→</span>
+
+                        </button>
+
+
+                    </form>
+
+
+
+                    <!-- LOGIN LINK -->
+                    <div class="register-login-link">
+
+                        <p>
+                            Already have an account?
+
+                            <a href="login.html">
+                                Sign in
+                            </a>
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- FOOTNOTE -->
+                    <div class="register-security-note">
+
+                        <span aria-hidden="true">●</span>
+
+                        <p>
+                            Account access will be subject to
+                            ArticleHub registration approval.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="register-footer">
+
+        <div class="container register-footer-container">
+
+            <p>
+                © <span id="current-year"></span>
+                ArticleHub. All rights reserved.
+            </p>
+
+            <p>
+                Ideas. Stories. Knowledge.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>
