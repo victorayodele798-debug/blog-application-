@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Write an Article | ArticleHub</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/article-submission.css">
+</head>
+
+<body class="submission-page">
+
+    <!-- HEADER -->
+    <header class="submission-header">
+
+        <div class="submission-header-inner">
+
+            <a href="contributor-dashboard.html"
+               class="brand"
+               aria-label="ArticleHub dashboard">
+
+                <svg class="brand-icon"
+                     viewBox="0 0 64 64"
+                     role="img"
+                     aria-label="ArticleHub logo">
+
+                    <defs>
+                        <linearGradient id="brandBlue"
+                                        x1="0" y1="0"
+                                        x2="1" y2="1">
+
+                            <stop offset="0%"
+                                  stop-color="#60A5FA"/>
+
+                            <stop offset="100%"
+                                  stop-color="#0755D9"/>
+
+                        </linearGradient>
+                    </defs>
+
+                    <path d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                          fill="url(#brandBlue)"/>
+
+                    <path d="M7 47 Q20 40 32 51 Q44 40 57 47
+                             L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                          fill="#14284A"/>
+
+                    <path d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                          fill="none"
+                          stroke="#60A5FA"
+                          stroke-width="2.5"
+                          stroke-linecap="round"/>
+
+                </svg>
+
+                <span class="brand-text">
+                    Article<span>Hub.</span>
+                    <small>Ideas. Stories. Knowledge.</small>
+                </span>
+
+            </a>
+
+
+            <div class="submission-header-actions">
+
+                <a href="contributor-dashboard.html"
+                   class="submission-back-link">
+
+                    <span aria-hidden="true">←</span>
+                    Dashboard
+
+                </a>
+
+                <button type="button"
+                        id="theme-toggle"
+                        class="theme-toggle"
+                        aria-label="Toggle colour theme">
+
+                    <span id="theme-icon"
+                          aria-hidden="true">☾</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="submission-main">
+
+        <div class="submission-container">
+
+
+            <!-- PAGE INTRODUCTION -->
+            <section class="submission-intro">
+
+                <div>
+
+                    <span class="submission-eyebrow">
+                        CONTRIBUTOR WORKSPACE
+                    </span>
+
+                    <h1>Create a new article</h1>
+
+                    <p>
+                        Share your ideas, knowledge and stories
+                        with the ArticleHub community.
+                    </p>
+
+                </div>
+
+                <div class="submission-status-indicator">
+
+                    <span class="status-dot"></span>
+
+                    <span id="editor-status">
+                        New article
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- EDITOR FORM -->
+            <form id="article-submission-form"
+                  class="article-submission-form"
+                  novalidate>
+
+
+                <!-- ARTICLE CONTENT -->
+                <section class="submission-panel article-content-panel">
+
+                    <div class="submission-panel-heading">
+
+                        <div>
+                            <span class="panel-step">01</span>
+                            <h2>Article content</h2>
+                        </div>
+
+                        <p>
+                            Start with a clear title and develop
+                            your story.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ARTICLE TITLE -->
+                    <div class="submission-field">
+
+                        <label for="article-title">
+                            Article title
+                        </label>
+
+                        <input
+                            type="text"
+                            id="article-title"
+                            name="title"
+                            placeholder="Enter a clear and engaging title"
+                            maxlength="150"
+                            required
+                        >
+
+                        <div class="field-meta">
+
+                            <span>
+                                Make your title specific and meaningful.
+                            </span>
+
+                            <span id="title-character-count">
+                                0 / 150
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ARTICLE EXCERPT -->
+                    <div class="submission-field">
+
+                        <label for="article-excerpt">
+                            Article summary
+                        </label>
+
+                        <textarea
+                            id="article-excerpt"
+                            name="excerpt"
+                            rows="3"
+                            maxlength="300"
+                            placeholder="Write a short introduction that tells readers what your article is about."
+                            required
+                        ></textarea>
+
+                        <div class="field-meta">
+
+                            <span>
+                                This summary may appear on article cards.
+                            </span>
+
+                            <span id="excerpt-character-count">
+                                0 / 300
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ARTICLE BODY -->
+                    <div class="submission-field article-body-field">
+
+                        <label>
+                            Article body
+                        </label>
+
+                        <p class="field-description">
+                            Develop your article using the editing tools below.
+                        </p>
+
+
+                        <!-- EDITOR TOOLBAR -->
+                        <div class="editor-toolbar"
+                             role="toolbar"
+                             aria-label="Article formatting tools">
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="bold"
+                                    aria-label="Bold"
+                                    title="Bold">
+
+                                <strong>B</strong>
+
+                            </button>
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="italic"
+                                    aria-label="Italic"
+                                    title="Italic">
+
+                                <em>I</em>
+
+                            </button>
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="underline"
+                                    aria-label="Underline"
+                                    title="Underline">
+
+                                <u>U</u>
+
+                            </button>
+
+                            <span class="toolbar-divider"></span>
+
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="formatBlock"
+                                    data-value="h2"
+                                    aria-label="Heading"
+                                    title="Heading">
+
+                                H2
+
+                            </button>
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="formatBlock"
+                                    data-value="h3"
+                                    aria-label="Subheading"
+                                    title="Subheading">
+
+                                H3
+
+                            </button>
+
+                            <span class="toolbar-divider"></span>
+
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="insertUnorderedList"
+                                    aria-label="Bulleted list"
+                                    title="Bulleted list">
+
+                                • List
+
+                            </button>
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    data-command="insertOrderedList"
+                                    aria-label="Numbered list"
+                                    title="Numbered list">
+
+                                1. List
+
+                            </button>
+
+                            <span class="toolbar-divider"></span>
+
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    id="insert-link-button"
+                                    aria-label="Insert link"
+                                    title="Insert link">
+
+                                <span aria-hidden="true">↗</span>
+                                Link
+
+                            </button>
+
+
+                            <button type="button"
+                                    class="editor-tool"
+                                    id="insert-article-image"
+                                    aria-label="Insert image"
+                                    title="Insert image">
+
+                                <span aria-hidden="true">▧</span>
+                                Image
+
+                            </button>
+
+                            <input
+                                type="file"
+                                id="article-inline-image-input"
+                                accept="image/jpeg,image/png,image/webp"
+                                hidden
+                            >
+
+                        </div>
+
+
+                        <!-- EDITABLE ARTICLE AREA -->
+                        <div
+                            id="article-editor"
+                            class="article-editor"
+                            contenteditable="true"
+                            role="textbox"
+                            aria-label="Write your article here"
+                            aria-multiline="true"
+                            data-placeholder="Begin writing your article here...
+
+Introduce your topic, develop your ideas and provide useful information for your readers."
+                        ></div>
+
+
+                        <div class="editor-footer">
+
+                            <span>
+                                Use clear paragraphs and descriptive headings.
+                            </span>
+
+                            <span id="article-word-count">
+                                0 words
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- COVER IMAGE -->
+                <section class="submission-panel cover-image-panel">
+
+                    <div class="submission-panel-heading">
+
+                        <div>
+                            <span class="panel-step">02</span>
+                            <h2>Cover image</h2>
+                        </div>
+
+                        <p>
+                            Choose the main image that represents your article.
+                        </p>
+
+                    </div>
+
+
+                    <div class="submission-field">
+
+                        <label for="article-cover-image">
+                            Upload cover image
+                        </label>
+
+                        <div class="cover-upload-area"
+                             id="cover-upload-area">
+
+                            <input
+                                type="file"
+                                id="article-cover-image"
+                                name="coverImage"
+                                accept="image/jpeg,image/png,image/webp"
+                                hidden
+                            >
+
+                            <div id="cover-upload-placeholder">
+
+                                <div class="upload-icon"
+                                     aria-hidden="true">
+
+                                    <span>↑</span>
+
+                                </div>
+
+                                <h3>Choose a cover image</h3>
+
+                                <p>
+                                    Select an image from your device.
+                                </p>
+
+                                <button type="button"
+                                        id="choose-cover-image"
+                                        class="secondary-button">
+
+                                    Browse files
+
+                                </button>
+
+                                <small>
+                                    Accepted formats: JPG, PNG and WebP.
+                                </small>
+
+                            </div>
+
+
+                            <div id="cover-image-preview"
+                                 class="cover-image-preview"
+                                 hidden>
+
+                                <img
+                                    id="cover-preview-image"
+                                    src=""
+                                    alt="Selected article cover preview"
+                                >
+
+                                <div class="cover-preview-actions">
+
+                                    <span id="cover-file-name"></span>
+
+                                    <button type="button"
+                                            id="replace-cover-image"
+                                            class="text-button">
+
+                                        Replace image
+
+                                    </button>
+
+                                    <button type="button"
+                                            id="remove-cover-image"
+                                            class="text-button danger-text">
+
+                                        Remove
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="submission-field">
+
+                        <label for="cover-image-alt">
+                            Image alternative text
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cover-image-alt"
+                            name="coverImageAlt"
+                            maxlength="180"
+                            placeholder="Describe the important content of the image"
+                        >
+
+                        <span class="field-hint">
+                            This helps readers using assistive technologies
+                            understand the image.
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ARTICLE DETAILS -->
+                <section class="submission-panel article-details-panel">
+
+                    <div class="submission-panel-heading">
+
+                        <div>
+                            <span class="panel-step">03</span>
+                            <h2>Article details</h2>
+                        </div>
+
+                        <p>
+                            Help readers discover your article.
+                        </p>
+
+                    </div>
+
+
+                    <div class="submission-fields-grid">
+
+
+                        <!-- CATEGORY -->
+                        <div class="submission-field">
+
+                            <label for="article-category">
+                                Primary category
+                            </label>
+
+                            <select
+                                id="article-category"
+                                name="category"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a category
+                                </option>
+
+                                <option value="technology">
+                                    Technology
+                                </option>
+
+                                <option value="education">
+                                    Education
+                                </option>
+
+                                <option value="business">
+                                    Business
+                                </option>
+
+                                <option value="science">
+                                    Science
+                                </option>
+
+                                <option value="health">
+                                    Health
+                                </option>
+
+                                <option value="global-affairs">
+                                    Global Affairs
+                                </option>
+
+                                <option value="lifestyle">
+                                    Lifestyle
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- LANGUAGE -->
+                        <div class="submission-field">
+
+                            <label for="article-language">
+                                Article language
+                            </label>
+
+                            <select
+                                id="article-language"
+                                name="language"
+                                required
+                            >
+
+                                <option value="en">
+                                    English
+                                </option>
+
+                                <option value="fr">
+                                    French
+                                </option>
+
+                                <option value="es">
+                                    Spanish
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- TAGS -->
+                    <div class="submission-field">
+
+                        <label for="article-tags">
+                            Article tags
+                        </label>
+
+                        <input
+                            type="text"
+                            id="article-tags"
+                            name="tags"
+                            placeholder="Artificial Intelligence, Innovation, Technology"
+                        >
+
+                        <span class="field-hint">
+                            Separate tags with commas. Use relevant terms
+                            that describe you
+                            that describe your article.
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- SUBMISSION GUIDELINES -->
+                <section class="submission-guidelines">
+
+                    <div class="guidelines-icon"
+                         aria-hidden="true">
+                        i
+                    </div>
+
+                    <div>
+
+                        <h3>Before submitting</h3>
+
+                        <p>
+                            Ensure your article is original, properly
+                            structured and relevant to its selected category.
+                            Check your spelling, verify factual claims and
+                            provide appropriate credit for external sources
+                            and images.
+                        </p>
+
+                        <a href="contributor-dashboard.html#guidelines">
+                            Read contributor guidelines
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- FEEDBACK MESSAGE -->
+                <div id="submission-message"
+                     class="submission-message"
+                     role="status"
+                     aria-live="polite"
+                     hidden>
+                </div>
+
+
+
+                <!-- FORM ACTIONS -->
+                <section class="submission-actions">
+
+                    <a href="contributor-dashboard.html"
+                       class="cancel-submission">
+                        Cancel
+                    </a>
+
+                    <div class="submission-action-buttons">
+
+                        <button
+                            type="button"
+                            id="save-article-draft"
+                            class="secondary-button">
+                            Save Draft
+                        </button>
+
+                        <button
+                            type="button"
+                            id="preview-article"
+                            class="secondary-button">
+                            Preview Article
+                        </button>
+
+                        <button
+                            type="submit"
+                            id="submit-article"
+                            class="primary-button">
+                            Submit for Review
+                            <span aria-hidden="true">→</span>
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="submission-footer">
+
+        <div class="submission-footer-inner">
+
+            <p>
+                © <span id="current-year"></span>
+                ArticleHub. All rights reserved.
+            </p>
+
+            <a href="terms.html">
+                Terms of Service
+            </a>
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
+    <script src="js/article-submission.js"></script>
+
+</body>
+</html>
