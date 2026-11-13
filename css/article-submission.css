@@ -1,0 +1,1012 @@
+
+/* =========================================================
+   ARTICLEHUB — ARTICLE SUBMISSION PAGE
+   File: css/article-submission.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE FOUNDATION
+   ========================================================= */
+
+.submission-page {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.submission-page * {
+    box-sizing: border-box;
+}
+
+.submission-page button,
+.submission-page input,
+.submission-page textarea,
+.submission-page select {
+    font: inherit;
+}
+
+.submission-main {
+    padding: 48px 0 75px;
+}
+
+.submission-container {
+    width: min(1050px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   2. SUBMISSION HEADER
+   ========================================================= */
+
+.submission-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(15px);
+}
+
+.submission-header-inner {
+    width: min(1200px, 92%);
+    min-height: 82px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.submission-header .brand {
+    text-decoration: none;
+}
+
+.submission-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.submission-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 650;
+
+    transition: color .2s ease;
+}
+
+.submission-back-link:hover {
+    color: var(--primary);
+}
+
+.submission-back-link span {
+    font-size: 20px;
+}
+
+.submission-header .theme-toggle {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: var(--surface);
+    color: var(--text);
+
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.submission-header .theme-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   3. PAGE INTRODUCTION
+   ========================================================= */
+
+.submission-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.submission-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.submission-intro h1 {
+    margin: 0 0 10px;
+
+    font-size: clamp(28px, 4vw, 39px);
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    font-weight: 850;
+}
+
+.submission-intro p {
+    max-width: 580px;
+    margin: 0;
+
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.submission-status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    background: var(--surface);
+    color: var(--muted);
+
+    font-size: 12px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d69a27;
+}
+
+
+/* =========================================================
+   4. SUBMISSION FORM PANELS
+   ========================================================= */
+
+.article-submission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.submission-panel {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.submission-panel-heading {
+    margin-bottom: 30px;
+}
+
+.submission-panel-heading > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.panel-step {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 9px;
+
+    background: var(--primary-soft);
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.submission-panel-heading h2 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.submission-panel-heading p {
+    margin: 9px 0 0 44px;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   5. FORM FIELDS
+   ========================================================= */
+
+.submission-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.submission-field:last-child {
+    margin-bottom: 0;
+}
+
+.submission-field label {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 750;
+}
+
+.submission-field input,
+.submission-field textarea,
+.submission-field select {
+    width: 100%;
+    min-width: 0;
+
+    padding: 14px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.submission-field input::placeholder,
+.submission-field textarea::placeholder {
+    color: var(--muted);
+    opacity: .75;
+}
+
+.submission-field input:focus,
+.submission-field textarea:focus,
+.submission-field select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(18, 98, 232, .11);
+}
+
+.submission-field textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.field-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.field-description {
+    margin: -4px 0 5px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.field-hint {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   6. ARTICLE EDITOR TOOLBAR
+   ========================================================= */
+
+.editor-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+
+    padding: 11px;
+
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+
+    background: var(--surface);
+}
+
+.editor-tool {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    min-width: 36px;
+    min-height: 35px;
+    padding: 7px 10px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    background: transparent;
+    color: var(--text);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.editor-tool:hover,
+.editor-tool.active {
+    background: var(--primary-soft);
+    color: var(--primary);
+    border-color: var(--border);
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 25px;
+    margin: 0 3px;
+    background: var(--border);
+}
+
+
+/* =========================================================
+   7. ARTICLE WRITING AREA
+   ========================================================= */
+
+.article-editor {
+    min-height: 430px;
+    padding: 25px;
+
+    border: 1px solid var(--border);
+    border-radius: 0 0 10px 10px;
+
+    background: var(--bg);
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    overflow-wrap: anywhere;
+}
+
+.article-editor:focus {
+    border-color: var(--primary);
+}
+
+.article-editor:empty::before {
+    content: attr(data-placeholder);
+    color: var(--muted);
+    opacity: .7;
+    white-space: pre-line;
+    pointer-events: none;
+}
+
+.article-editor h2 {
+    margin: 25px 0 12px;
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+.article-editor h3 {
+    margin: 22px 0 10px;
+    font-size: 19px;
+}
+
+.article-editor p {
+    margin: 0 0 17px;
+}
+
+.article-editor ul,
+.article-editor ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.article-editor a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.article-editor img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.editor-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   8. COVER IMAGE UPLOAD
+   ========================================================= */
+
+.cover-upload-area {
+    padding: 35px 20px;
+
+    border: 2px dashed var(--border);
+    border-radius: 13px;
+
+    background: var(--surface);
+
+    text-align: center;
+    transition: .2s ease;
+}
+
+.cover-upload-area:hover {
+    border-color: var(--primary);
+}
+
+.upload-icon {
+    display: grid;
+    place-items: center;
+
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 17px;
+
+    border-radius: 15px;
+
+    background: var(--primary-soft);
+    color: var(--primary);
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cover-upload-area h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.cover-upload-area p {
+    margin: 0 0 17px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.cover-upload-area small {
+    display: block;
+    margin-top: 15px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.secondary-button,
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 44px;
+    padding: 11px 19px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 750;
+
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.secondary-button {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+}
+
+.secondary-button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.cover-image-preview {
+    width: 100%;
+    text-align: left;
+}
+
+.cover-image-preview img {
+    display: block;
+
+    width: 100%;
+    max-height: 350px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cover-preview-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.cover-preview-actions span {
+    flex: 1 1 100%;
+    color: var(--muted);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.text-button {
+    padding: 5px 0;
+    border: none;
+    background: transparent;
+
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.danger-text {
+    color: #d74747;
+}
+
+
+/* =========================================================
+   9. ARTICLE DETAILS
+   ========================================================= */
+
+.submission-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.submission-fields-grid .submission-field {
+    margin-bottom: 20px;
+}
+
+.submission-field select {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   10. SUBMISSION GUIDELINES
+   ========================================================= */
+
+.submission-guidelines {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    padding: 22px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: var(--surface);
+}
+
+.guidelines-icon {
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: var(--primary-soft);
+    color: var(--primary);
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.submission-guidelines h3 {
+    margin: 2px 0 9px;
+    font-size: 15px;
+}
+
+.submission-guidelines p {
+    margin: 0 0 12px;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.submission-guidelines a {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.submission-guidelines a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   11. SUBMISSION FEEDBACK
+   ========================================================= */
+
+.submission-message {
+    padding: 15px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--surface);
+    color: var(--text);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.submission-message.success {
+    border-color: #6ab58b;
+    background: rgba(34, 160, 95, .08);
+    color: #21834f;
+}
+
+.submission-message.error {
+    border-color: #e5a0a0;
+    background: rgba(215, 71, 71, .08);
+    color: #c33c3c;
+}
+
+.submission-message.info {
+    border-color: var(--border);
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   12. SUBMISSION ACTIONS
+   ========================================================= */
+
+.submission-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.cancel-submission {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.cancel-submission:hover {
+    color: var(--primary);
+}
+
+.submission-action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.primary-button {
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   13. SUBMISSION FOOTER
+   ========================================================= */
+
+.submission-footer {
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.submission-footer-inner {
+    width: min(1050px, 92%);
+    min-height: 75px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.submission-footer-inner p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.submission-footer-inner a {
+    color: var(--muted);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.submission-footer-inner a:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   14. TABLET RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .submission-main {
+        padding-top: 35px;
+    }
+
+    .submission-panel {
+        padding: 25px;
+    }
+
+    .submission-intro {
+        align-items: flex-start;
+    }
+
+    .submission-status-indicator {
+        margin-top: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   15. MOBILE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .submission-header-inner {
+        min-height: 72px;
+    }
+
+    .submission-header .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .submission-header .brand-text {
+        font-size: 19px;
+    }
+
+    .submission-header .brand-text small {
+        font-size: 9px;
+    }
+
+    .submission-header-actions {
+        gap: 10px;
+    }
+
+    .submission-back-link {
+        font-size: 12px;
+    }
+
+    .submission-header .theme-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .submission-intro {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .submission-intro h1 {
+        font-size: 29px;
+    }
+
+    .submission-status-indicator {
+        margin-top: 0;
+    }
+
+    .submission-panel {
+        padding: 21px 17px;
+        border-radius: 13px;
+    }
+
+    .submission-panel-heading h2 {
+        font-size: 18px;
+    }
+
+    .submission-panel-heading p {
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    .submission-fields-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .article-editor {
+        min-height: 350px;
+        padding: 17px;
+        font-size: 14px;
+    }
+
+    .editor-toolbar {
+        gap: 4px;
+        padding: 8px;
+    }
+
+    .editor-tool {
+        min-width: 32px;
+        min-height: 32px;
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .toolbar-divider {
+        margin: 0 1px;
+    }
+
+    .submission-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .submission-action-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #submit-article {
+        grid-column: 1 / -1;
+    }
+
+    .cancel-submission {
+        text-align: center;
+        padding: 12px;
+    }
+
+    .submission-footer-inner {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+}
+
+
+/* =========================================================
+   16. SMALL MOBILE SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .submission-header .brand-text {
+        font-size: 16px;
+    }
+
+    .submission-back-link {
+        gap: 4px;
+        font-size: 11px;
+    }
+
+    .submission-intro h1 {
+        font-size: 25px;
+    }
+
+    .submission-panel {
+        padding: 17px 13px;
+    }
+
+    .field-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .submission-action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    #submit-article {
+        grid-column: auto;
+    }
+
+}
+
+
+/* =========================================================
+   17. ACCESSIBILITY AND REDUCED MOTION
+   ========================================================= */
+
+.submission-page button:focus-visible,
+.submission-page a:focus-visible,
+.submission-page input:focus-visible,
+.submission-page select:focus-visible,
+.submission-page textarea:focus-visible,
+.article-editor:focus-visible {
+    outline: 3px solid rgba(18, 98, 232, .35);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .submission-page *,
+    .submission-page *::before,
+    .submission-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+}
