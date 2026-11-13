@@ -1,0 +1,1476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | ArticleHub</title>
+
+    <meta name="description" content="ArticleHub administration dashboard for managing articles, contributors and editorial activities.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+</head>
+
+<body class="admin-dashboard-page">
+
+    <!-- =========================================
+         ADMIN HEADER
+    ========================================== -->
+
+    <header class="admin-header">
+
+        <div class="admin-header-inner">
+
+            <a href="index.html" class="brand"
+               aria-label="ArticleHub home">
+
+                <svg class="brand-icon"
+                     viewBox="0 0 64 64"
+                     role="img"
+                     aria-label="ArticleHub logo">
+
+                    <defs>
+                        <linearGradient id="brandBlue"
+                            x1="0" y1="0" x2="1" y2="1">
+
+                            <stop offset="0%"
+                                stop-color="#60A5FA"/>
+
+                            <stop offset="100%"
+                                stop-color="#0755D9"/>
+
+                        </linearGradient>
+                    </defs>
+
+                    <path
+                        d="M32 4 L53 43 H42 L32 23 L22 43 H11 Z"
+                        fill="url(#brandBlue)"/>
+
+                    <path
+                        d="M7 47 Q20 40 32 51 Q44 40 57 47 L57 53 Q44 47 32 58 Q20 47 7 53 Z"
+                        fill="#14284A"/>
+
+                    <path
+                        d="M10 55 Q22 49 32 59 Q42 49 54 55"
+                        fill="none"
+                        stroke="#60A5FA"
+                        stroke-width="2.5"
+                        stroke-linecap="round"/>
+
+                </svg>
+
+                <span class="brand-text">
+                    Article<span>Hub.</span>
+                    <small>Ideas. Stories. Knowledge.</small>
+                </span>
+
+            </a>
+
+            <div class="admin-header-actions">
+
+                <a href="index.html"
+                   class="admin-visit-link">
+                    Visit Website
+                </a>
+
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Toggle colour theme">
+
+                    <span id="theme-icon"
+                          aria-hidden="true">
+                        ☾
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="admin-menu-toggle"
+                    id="admin-menu-toggle"
+                    aria-label="Open administration menu"
+                    aria-expanded="false"
+                    aria-controls="admin-sidebar">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         ADMIN DASHBOARD LAYOUT
+    ========================================== -->
+
+    <div class="admin-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="admin-sidebar"
+               id="admin-sidebar">
+
+            <div class="admin-sidebar-heading">
+
+                <span class="admin-sidebar-label">
+                    ADMINISTRATION
+                </span>
+
+                <div class="admin-profile">
+
+                    <div class="admin-avatar">
+                        AH
+                    </div>
+
+                    <div class="admin-profile-info">
+
+                        <strong>Administrator</strong>
+
+                        <span>Platform Management</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <nav class="admin-navigation"
+                 aria-label="Administration navigation">
+
+                <p class="admin-nav-heading">
+                    WORKSPACE
+                </p>
+
+                <a href="#overview"
+                   class="admin-nav-link active"
+                   data-admin-section="overview"
+                   aria-current="page">
+
+                    <span class="admin-nav-icon">⌂</span>
+                    <span>Overview</span>
+
+                </a>
+
+
+                <a href="#review-centre"
+                   class="admin-nav-link"
+                   data-admin-section="review-centre">
+
+                    <span class="admin-nav-icon">▤</span>
+                    <span>Review Centre</span>
+
+                    <span class="admin-nav-count"
+                          id="pending-review-count">
+                        4
+                    </span>
+
+                </a>
+
+
+                <a href="#articles"
+                   class="admin-nav-link"
+                   data-admin-section="articles">
+
+                    <span class="admin-nav-icon">▣</span>
+                    <span>Articles</span>
+
+                </a>
+
+
+                <p class="admin-nav-heading">
+                    COMMUNITY
+                </p>
+
+
+                <a href="#contributors"
+                   class="admin-nav-link"
+                   data-admin-section="contributors">
+
+                    <span class="admin-nav-icon">♙</span>
+                    <span>Contributors</span>
+
+                </a>
+
+
+                <a href="#categories"
+                   class="admin-nav-link"
+                   data-admin-section="categories">
+
+                    <span class="admin-nav-icon">▦</span>
+                    <span>Categories</span>
+
+                </a>
+
+
+                <p class="admin-nav-heading">
+                    SYSTEM
+                </p>
+
+
+                <a href="#notifications"
+                   class="admin-nav-link"
+                   data-admin-section="notifications">
+
+                    <span class="admin-nav-icon">♧</span>
+                    <span>Notifications</span>
+
+                    <span class="admin-notification-dot"></span>
+
+                </a>
+
+
+                <a href="#settings"
+                   class="admin-nav-link"
+                   data-admin-section="settings">
+
+                    <span class="admin-nav-icon">⚙</span>
+                    <span>Settings</span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar-bottom">
+
+                <a href="contact.html"
+                   class="admin-support-link">
+
+                    <span class="admin-nav-icon">?</span>
+                    <span>Contact Support</span>
+
+                </a>
+
+                <a href="login.html"
+                   class="admin-logout-link">
+
+                    <span class="admin-nav-icon">↪</span>
+                    <span>Log Out</span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
+
+        <main class="admin-main"
+              id="admin-main">
+
+
+            <!-- =================================
+                 OVERVIEW SECTION
+            ================================== -->
+
+            <section
+                class="admin-section active"
+                id="overview"
+                data-admin-content="overview">
+
+                <div class="admin-welcome">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            ADMINISTRATION CENTRE
+                        </span>
+
+                        <h1>
+                            Dashboard Overview
+                        </h1>
+
+                        <p>
+                            Manage your publication, review submissions
+                            and oversee the ArticleHub community.
+                        </p>
+
+                    </div>
+
+                    <div class="admin-date">
+
+                        <span>Workspace</span>
+                        <strong>ArticleHub Admin</strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="admin-stat-grid">
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+                            <span>Total Articles</span>
+                            <span class="admin-stat-icon">▤</span>
+                        </div>
+
+                        <strong class="admin-stat-number">
+                            128
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Across all categories
+                        </span>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+                            <span>Published Articles</span>
+                            <span class="admin-stat-icon">✓</span>
+                        </div>
+
+                        <strong class="admin-stat-number">
+                            96
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Currently published
+                        </span>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+                            <span>Pending Reviews</span>
+                            <span class="admin-stat-icon">◷</span>
+                        </div>
+
+                        <strong class="admin-stat-number">
+                            4
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Awaiting editorial review
+                        </span>
+
+                    </article>
+
+
+                    <article class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+                            <span>Contributors</span>
+                            <span class="admin-stat-icon">♙</span>
+                        </div>
+
+                        <strong class="admin-stat-number">
+                            32
+                        </strong>
+
+                        <span class="admin-stat-description">
+                            Registered contributors
+                        </span>
+
+                    </article>
+
+                </div>
+
+
+                <!-- OVERVIEW CONTENT -->
+
+                <div class="admin-overview-grid">
+
+
+                    <!-- RECENT SUBMISSIONS -->
+
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <h2>Recent Submissions</h2>
+
+                                <p>
+                                    Latest articles submitted by contributors.
+                                </p>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="admin-text-button"
+                                data-admin-link="review-centre">
+
+                                View all
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="admin-table-wrapper">
+
+                            <table class="admin-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>Article</th>
+                                        <th>Contributor</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>
+                                            The Future of Artificial Intelligence
+                                        </td>
+
+                                        <td>John David</td>
+
+                                        <td>
+                                            <span class="admin-status pending">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            Digital Learning in Modern Education
+                                        </td>
+
+                                        <td>Sarah James</td>
+
+                                        <td>
+                                            <span class="admin-status published">
+                                                Published
+                                            </span>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            Understanding Sustainable Innovation
+                                        </td>
+
+                                        <td>Michael Adams</td>
+
+                                        <td>
+                                            <span class="admin-status review">
+                                                In Review
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <h2>Quick Actions</h2>
+
+                                <p>
+                                    Access important administration tools.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-quick-actions">
+
+                            <button
+                                type="button"
+                                class="admin-quick-action"
+                                data-admin-link="review-centre">
+
+                                <span>▤</span>
+
+                                <div>
+                                    <strong>Review Submissions</strong>
+                                    <small>Examine pending articles</small>
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="admin-quick-action"
+                                data-admin-link="articles">
+
+                                <span>▣</span>
+
+                                <div>
+                                    <strong>Manage Articles</strong>
+                                    <small>View published content</small>
+                                </div>
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="admin-quick-action"
+                                data-admin-link="contributors">
+
+                                <span>♙</span>
+
+                                <div>
+                                    <strong>Manage Contributors</strong>
+                                    <small>View author accounts</small>
+                                </div>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 REVIEW CENTRE
+            ================================== -->
+
+            <section
+                class="admin-section"
+                id="review-centre"
+                data-admin-content="review-centre">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <span class="admin-eyebrow">
+                            EDITORIAL WORKFLOW
+                        </span>
+
+                        <h1>Review Centre</h1>
+
+                        <p>
+                            Examine contributor submissions and
+                            make editorial decisions.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Submitted Articles</h2>
+
+                            <p>
+                                Review articles awaiting editorial attention.
+                            </p>
+                        </div>
+
+                        <span class="admin-review-total">
+                            4 Pending
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Article Title</th>
+                                    <th>Contributor</th>
+                                    <th>Category</th>
+                                    <th>Date Submitted</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="admin-review-table">
+
+                                <tr data-review-status="pending">
+
+                                    <td>
+                                        The Future of Artificial Intelligence
+                                    </td>
+
+                                    <td>John David</td>
+                                    <td>Technology</td>
+                                    <td>Nov 12, 2026</td>
+
+                                    <td>
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="admin-action-button"
+                                            data-review-action="view">
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-review-status="pending">
+
+                                    <td>
+                                        The Importance of Digital Literacy
+                                    </td>
+
+                                    <td>Sarah James</td>
+                                    <td>Education</td>
+                                    <td>Nov 12, 2026</td>
+
+                                    <td>
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                          
+                                            type="button"
+                                            class="admin-action-button"
+                                            data-review-action="view">
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-review-status="pending">
+
+                                    <td>
+                                        Building Sustainable Businesses
+                                    </td>
+
+                                    <td>Michael Adams</td>
+                                    <td>Business</td>
+                                    <td>Nov 11, 2026</td>
+
+                                    <td>
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="admin-action-button"
+                                            data-review-action="view">
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-review-status="pending">
+
+                                    <td>
+                                        Innovation in Modern Healthcare
+                                    </td>
+
+                                    <td>Daniel Peter</td>
+                                    <td>Health</td>
+                                    <td>Nov 10, 2026</td>
+
+                                    <td>
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            type="button"
+                                            class="admin-action-button"
+                                            data-review-action="view">
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVIEW DETAIL AREA -->
+
+                <div class="admin-panel admin-review-detail"
+                     id="admin-review-detail">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Article Review</h2>
+
+                            <p>
+                                Select an article above to inspect its details.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="admin-review-placeholder">
+
+                        <span>▤</span>
+
+                        <h3>No Article Selected</h3>
+
+                        <p>
+                            Choose an article from the review table
+                            to view its content and editorial details.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 ARTICLE MANAGEMENT
+            ================================== -->
+
+            <section
+                class="admin-section"
+                id="articles"
+                data-admin-content="articles">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <span class="admin-eyebrow">
+                            CONTENT MANAGEMENT
+                        </span>
+
+                        <h1>Article Management</h1>
+
+                        <p>
+                            View and manage articles across ArticleHub.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>All Articles</h2>
+
+                            <p>
+                                Manage article publication records.
+                            </p>
+                        </div>
+
+                        <select
+                            id="admin-article-filter"
+                            class="admin-filter-select"
+                            aria-label="Filter articles by status">
+
+                            <option value="all">All Articles</option>
+                            <option value="published">Published</option>
+                            <option value="pending">Pending</option>
+                            <option value="draft">Draft</option>
+                            <option value="rejected">Rejected</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Article</th>
+                                    <th>Author</th>
+                                    <th>Category</th>
+                                    <th>Publication Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="admin-articles-table">
+
+                                <tr data-article-status="published">
+
+                                    <td>
+                                        Digital Learning in Modern Education
+                                    </td>
+                                    <td>Sarah James</td>
+                                    <td>Education</td>
+                                    <td>Nov 10, 2026</td>
+
+                                    <td>
+                                        <span class="admin-status published">
+                                            Published
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            Manage
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-article-status="published">
+
+                                    <td>
+                                        Technology and the Future of Work
+                                    </td>
+                                    <td>John David</td>
+                                    <td>Technology</td>
+                                    <td>Nov 08, 2026</td>
+
+                                    <td>
+                                        <span class="admin-status published">
+                                            Published
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            Manage
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-article-status="pending">
+
+                                    <td>
+                                        The Future of Artificial Intelligence
+                                    </td>
+                                    <td>John David</td>
+                                    <td>Technology</td>
+                                    <td>—</td>
+
+                                    <td>
+                                        <span class="admin-status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            Manage
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr data-article-status="draft">
+
+                                    <td>
+                                        My Thoughts on Digital Innovation
+                                    </td>
+                                    <td>Daniel Peter</td>
+                                    <td>Business</td>
+                                    <td>—</td>
+
+                                    <td>
+                                        <span class="admin-status draft">
+                                            Draft
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            Manage
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 CONTRIBUTOR MANAGEMENT
+            ================================== -->
+
+            <section
+                class="admin-section"
+                id="contributors"
+                data-admin-content="contributors">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <span class="admin-eyebrow">
+                            COMMUNITY MANAGEMENT
+                        </span>
+
+                        <h1>Contributors</h1>
+
+                        <p>
+                            Oversee the authors contributing to ArticleHub.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Contributor Directory</h2>
+
+                            <p>
+                                Registered contributor accounts.
+                            </p>
+                        </div>
+
+                        <input
+                            type="search"
+                            id="admin-contributor-search"
+                            class="admin-search-input"
+                            placeholder="Search contributors..."
+                            aria-label="Search contributors">
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Contributor</th>
+                                    <th>Email</th>
+                                    <th>Articles</th>
+                                    <th>Joined</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="admin-contributors-table">
+
+                                <tr>
+                                    <td>John David</td>
+                                    <td>john@example.com</td>
+                                    <td>12</td>
+                                    <td>Oct 2026</td>
+
+                                    <td>
+                                        <span class="admin-status published">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            View
+                                        </button>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>Sarah James</td>
+                                    <td>sarah@example.com</td>
+                                    <td>8</td>
+                                    <td>Sep 2026</td>
+
+                                    <td>
+                                        <span class="admin-status published">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            View
+                                        </button>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>Michael Adams</td>
+                                    <td>michael@example.com</td>
+                                    <td>5</td>
+                                    <td>Oct 2026</td>
+
+                                    <td>
+                                        <span class="admin-status published">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button type="button"
+                                            class="admin-action-button">
+                                            View
+                                        </button>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 CATEGORY MANAGEMENT
+            ================================== -->
+
+            <section
+                class="admin-section"
+                id="categories"
+                data-admin-content="categories">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <span class="admin-eyebrow">
+                            EDITORIAL ORGANISATION
+                        </span>
+
+                        <h1>Categories</h1>
+
+                        <p>
+                            Organise ArticleHub content into editorial topics.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Content Categories</h2>
+
+                            <p>
+                                Current editorial categories.
+                            </p>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="admin-primary-button"
+                            id="add-category-button">
+
+                            + Add Category
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-category-grid"
+                         id="admin-category-grid">
+
+                        <article class="admin-category-card">
+                            <span>01</span>
+                            <h3>Technology</h3>
+                            <p>28 articles</p>
+                        </article>
+
+                        <article class="admin-category-card">
+                            <span>02</span>
+                            <h3>Education</h3>
+                            <p>18 articles</p>
+                        </article>
+
+                        <article class="admin-category-card">
+                            <span>03</span>
+                            <h3>Business</h3>
+                            <p>15 articles</p>
+                        </article>
+
+                        <article class="admin-category-card">
+                            <span>04</span>
+                            <h3>Science</h3>
+                            <p>12 articles</p>
+                        </article>
+
+                        <article class="admin-category-card">
+                            <span>05</span>
+                            <h3>Health</h3>
+                            <p>10 articles</p>
+                        </article>
+
+                        <article class="admin-category-card">
+                            <span>06</span>
+                            <h3>Global Affairs</h3>
+                            <p>8 articles</p>
+                        </article>
+
+                        <article class="admin-category-card">
+                            <span>07</span>
+                            <h3>Lifestyle</h3>
+                            <p>5 articles</p>
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 NOTIFICATIONS
+            ================================== -->
+
+            <section
+                class="admin-section"
+                id="notifications"
+                data-admin-content="notifications">
+
+                <div class="admin-section-heading">
+
+                    <div>
+                        <span class="admin-eyebrow">
+                            SYSTEM UPDATES
+                        </span>
+
+                        <h1>Notifications</h1>
+
+                        <p>
+                            Important editorial and platform updates.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h2>Recent Notifications</h2>
+
+                            <p>
+                                Your latest administrative updates.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-notification-list">
+
+                        <article class="admin-notification-item">
+
+                            <span class="admin-notification-icon">
+                                ▤
+                            </span>
+
+                            <div>
+                                <strong>New article submission</strong>
+
+                                <p>
+                                    John David submitted an article
+                                    for editorial review.
+                                </p>
+
+                                <small>Recently</smal
+                                <small>Recently</small>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="admin-notification-item">
+
+                            <span class="admin-notification-icon">
+                                ♙
+                            </span>
+
+                            <div>
+
+                                <strong>New contributor registered</strong>
+
+                                <p>
+                                    A new contributor account has
+                                    been registered.
+                                </p>
+
+                                <small>Recently</small>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="admin-notification-item">
+
+                            <span class="admin-notification-icon">
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <strong>Article published</strong>
+
+                                <p>
+                                    Digital Learning in Modern Education
+                                    was marked as published.
+                                </p>
+
+                                <small>Recently</small>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 SETTINGS
+            ================================== -->
+
+            <section
+                class="admin-section"
+                id="settings"
+                data-admin-content="settings">
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            PLATFORM PREFERENCES
+                        </span>
+
+                        <h1>Settings</h1>
+
+                        <p>
+                            Review administration workspace preferences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+
+                            <h2>General Settings</h2>
+
+                            <p>
+                                Basic information about the publication.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-settings-content">
+
+                        <div class="admin-setting-item">
+
+                            <div>
+
+                                <strong>Publication Name</strong>
+
+                                <p>
+                                    The name displayed across the platform.
+                                </p>
+
+                            </div>
+
+                            <span>ArticleHub</span>
+
+                        </div>
+
+
+                        <div class="admin-setting-item">
+
+                            <div>
+
+                                <strong>Publication Tagline</strong>
+
+                                <p>
+                                    The platform's editorial identity.
+                                </p>
+
+                            </div>
+
+                            <span>
+                                Ideas. Stories. Knowledge.
+                            </span>
+
+                        </div>
+
+
+                        <div class="admin-setting-item">
+
+                            <div>
+
+                                <strong>Default Language</strong>
+
+                                <p>
+                                    Primary language for the publication.
+                                </p>
+
+                            </div>
+
+                            <span>English</span>
+
+                        </div>
+
+
+                        <div class="admin-setting-item">
+
+                            <div>
+
+                                <strong>Platform Status</strong>
+
+                                <p>
+                                    Current development environment.
+                                </p>
+
+                            </div>
+
+                            <span class="admin-status review">
+                                Frontend Prototype
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 ADMIN FOOTER
+            ================================== -->
+
+            <footer class="admin-footer">
+
+                <p>
+                    © <span id="admin-current-year">2026</span>
+                    ArticleHub. All rights reserved.
+                </p>
+
+                <span>
+                    Ideas. Stories. Knowledge.
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>
