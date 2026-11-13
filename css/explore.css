@@ -1114,3 +1114,126 @@
     }
 
 }
+
+/* =========================================================
+   13. ENHANCED EXPLORE TOPIC ICONS
+   ========================================================= */
+
+.explore-topic-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Icon container */
+
+.explore-topic-card .topic-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+    background: var(--primary-soft);
+
+    border-radius: 13px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* SVG icon */
+
+.explore-topic-card .topic-icon svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+/* Hover effect */
+
+.explore-topic-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 25px rgba(18, 98, 232, 0.09);
+}
+
+.explore-topic-card:hover .topic-icon {
+    transform: scale(1.07);
+}
+
+/* Selected topic */
+
+.explore-topic-card.active {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+    box-shadow: 0 5px 16px rgba(18, 98, 232, 0.08);
+}
+
+.explore-topic-card.active .topic-icon {
+    color: #ffffff;
+    background: var(--primary);
+}
+
+/* Topic title */
+
+.explore-topic-card strong {
+    display: block;
+    font-weight: 750;
+}
+
+/* Topic description */
+
+.explore-topic-card small {
+    display: block;
+    margin-top: 7px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* Keyboard accessibility */
+
+.explore-topic-card:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 480px) {
+
+    .explore-topic-card .topic-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 11px;
+        margin-bottom: 12px;
+    }
+
+    .explore-topic-card .topic-icon svg {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .explore-topic-card,
+    .explore-topic-card .topic-icon {
+        transition: none;
+    }
+
+    .explore-topic-card:hover {
+        transform: none;
+    }
+}
